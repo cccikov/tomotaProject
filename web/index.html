@@ -27,16 +27,51 @@
 			overflow: hidden;
 		}
 		.left{
+			position: relative;
 			float: left;
 			width: 200px;
 			height:100%;
 			background: #efe;
 		}
+		.left-main{
+			box-sizing: border-box;
+			height:100%;
+			padding:50px 0 50px;
+			/*overflow: auto;*/
+			/*在这里设置overflow:auto出现的滚动条会嵌到.left-top 和 .left-bottom ; 应该是在里面的一个块元素.scroll-bar设置overflow:auto*/
+		}
+		.scroll-bar{
+			height: 100%;
+			overflow: auto;
+		}
+		ul,li{
+			padding:0;
+			margin:0;
+			list-style: none;
+		}
+		li{
+			border-bottom:1px solid #ccc;
+			line-height: 30px;
+			background: #eee;
+		}
+		.left-top{
+			position: absolute;
+			top:0;
+			width: 100%;
+			height:50px;
+			background: #70b8ff;
+		}
+		.left-bottom{
+			position: absolute;
+			bottom:0;
+			width: 100%;
+			height:50px;
+			background: #70b8ff;
+		}
 		.right{
 			position: relative;
 			height:100%;
 			overflow: hidden;
-			background: red;
 		}
 		.frame{
 			box-sizing: border-box;
@@ -49,6 +84,7 @@
 			width: 100%;
 			height:60px;
 			background: #eef;
+			font-size: 12px;
 		}
 		iframe{
 			display: block;
@@ -64,7 +100,64 @@
 		<div class="main">
 
 			<div class="left">
-				left
+				<div class="left-top">left-top</div>
+				<div class="left-main">
+					<div class="scroll-bar">
+						<ul>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+							<li>Lorem ipsum.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="left-bottom">left-bottom</div>
 			</div>
 
 			<div class="right">
@@ -73,6 +166,7 @@
 				</div>
 				<div class="bottom">
 					bottom
+					<br>这种高度占满全屏的页面 , 关键是中间部分是height:100% , box-sizing:border-box , 通过padding-top padding-bottom 给上下块留下位置 . 而上下块这些固定高度的块是通过position:absolute放在所需位置 . 一般中间块里面都会出现滚动条 , 避免本元素出现 , 因为滚动条条会嵌在上面或者下面的块元素里面 , 应该是让子元素出现这个滚动条
 				</div>
 			</div>
 		</div>
