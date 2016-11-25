@@ -57,6 +57,7 @@ body {
   margin: 0 10px 0 0;
   text-align: center;
   color: #0082ca;
+  background: #fff;
 }
 .temple-wrap .tpl-type a.active {
   background: #0082ca;

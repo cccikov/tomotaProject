@@ -6,8 +6,10 @@ window.onload = function(){
 			e.stopPropagation();
 			var that = this;
 			if(hasClass(that,"active")){
+				// 关闭操作
 				removeClass(that,"active")
 			}else{
+				// 打开操作
 				addClass(that,"active");
 			}
 		}
