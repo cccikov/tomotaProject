@@ -1,0 +1,114 @@
+// color
+// 标准色
+@c-standard-a: #0082CA; //蓝
+@c-standard-b: #6BC04B; //绿
+@c-standard-c: #FC5D5A; //红
+@c-standard-d: #212121; //黑
+
+// 背景色
+@c-gray-a: #F5F5F5; //背景底色
+@c-gray-b: #F3F3F3; //内容块底色
+@c-gray-c: #E3E3E3; //tab底色
+@c-gray-d: #666666; //hender导航条底色（较浅）
+@c-gray-e: #434343; //header导航条底色（较深）
+@c-gray-f: #FBFBFB; //footer背景色
+@c-gray-g: #A0A0A0; //无需通知考官背景色
+
+// 字体色
+@fc-a: #333; //左侧导航条（黑色）
+@fc-b: #888; //面包屑，项目名称，产品名称等
+@fc-c: #939292; //二级的文字颜色
+
+
+// 进度条
+@c-process-k: #98BBE6;  //考试进度背景色
+@c-process-p: #7DABE5;  //评卷进度背景色，通知考官评卷背景色
+
+
+// 字体大小
+@fs: 12px;
+@fs10: 10px;
+@fs14: 14px;
+@fs16: 16px;
+@fs18: 18px;
+@fs20: 20px;
+
+
+// 清除默认样式
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    background: #fff;
+    color: @c-standard-d;
+    font: @fs/1.5 'microsoft yahei', Verdana, Arial, 'simsun';
+}
+//超链接
+a {
+    text-decoration: none;
+    color: @c-standard-d;
+}
+
+a.important-link {
+    color: @c-standard-a;
+}
+
+
+
+// hover效果
+.mouse-hover:hover {
+    text-decoration: underline;
+    color: @c-standard-a;
+}
+
+
+
+// 文本对齐方式
+.tc(@ta:center){
+    text-align: @ta;
+}
+.tl(){
+    text-align: left;
+}
+.tr(){
+    text-align: right;
+}
+
+
+
+// 字体加粗
+.fw(){
+    font-weight: bold;
+}
+
+
+
+// 浮动
+.fl(){
+    float: left;
+}
+.fr(){
+    float: right;
+}
+
+// 清除浮动
+.clearfix() {
+    &:after {
+        content: '';
+        display: block;
+        clear: both
+    }
+}
+
+
+//超出隐藏
+.elli() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

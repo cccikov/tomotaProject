@@ -1,0 +1,157 @@
+@import url(common.less);
+@cell-width:9.09%;
+a{
+	color:inherit;
+}
+html,body{
+	height:100%;
+}
+.wrap{
+	height:100%;
+}
+.temple-wrap{
+	box-sizing: border-box;
+	min-width:1380px;
+	height:100%;
+	padding:28px+58px 50px 28px;
+	background: @c-gray-a;
+	font-size:@fs16;
+
+	// 模板导航部分
+	.tpl-nav{
+		margin:0 8px;
+		color:@fc-b;
+		span{
+			color:@c-standard-a;
+		}
+	}
+
+	// 模板种类
+	.tpl-type{
+		margin: 25px 0;
+		a{
+			display:inline-block;
+			width: 180px;
+			line-height: 41px;
+			border:1px solid @c-standard-a;
+			margin:0 10px 0 0;
+			.tc;
+			color:@c-standard-a;
+			&.active{
+				background: @c-standard-a;
+				color:#fff;
+			}
+		}
+	}
+
+	// 模板主要
+	.tpl-main{
+		background: #fff;
+		padding:28px 26px;
+		// 新建-删除按钮
+		.tpl-main-action{
+			padding:16px 30px;
+			background: @c-gray-c;
+			a{
+				display:inline-block;
+				line-height:28px;
+				border:1px solid @c-standard-b;
+				border-radius: 2px;
+				.tc;
+				margin:0 10px 0 0;
+			}
+			a:nth-of-type(1){
+				width:135px;
+				background: @c-standard-b;
+				color:#fff;
+			}
+			a:nth-of-type(2){
+				width: 108px;
+				background: #fff;
+				color:@c-standard-b;
+			}
+		}
+		// 模板列表
+		.tpl-list{
+			display:table;
+			.tc;
+			// 标题
+			.tpl-title{
+				display:table-row;
+				p{
+					display:table-cell;
+					width:@cell-width;
+					line-height:45px;
+					padding:15px 0 0 0;
+					border-bottom: 1px solid @fc-a;
+					vertical-align: middle;
+					.fw;
+					color:@fc-a;
+					&:nth-of-type(4){
+						width:3*@cell-width;
+					}
+				}
+			}
+			// 真正列表
+			.tpl-item{
+				display:table-row;
+				p{
+					display:table-cell;
+					width:@cell-width;
+					padding:15px 0 8px;
+					border-bottom:1px dashed @c-gray-c;
+					vertical-align: middle;
+					color:@fc-b;
+					&:nth-of-type(4){
+						width:3*@cell-width;
+						.tl;
+					}
+					&:last-of-type{
+						a{
+							display:inline-block;
+							padding:0 8px;
+							text-decoration:underline;
+						}
+						.edit{
+							color:#0084FF;
+						}
+						.del{
+							color:#ff4539
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 滑动按钮
+.slideBtn{
+	position: relative;
+	display:inline-block;
+	width: 50px;
+	height: 24px;
+	border:2px solid #CDD5D7;
+	border-radius:50px;
+	background: #CDD5D7;
+	transition: all 0.2s;
+	cursor: pointer;
+	&:before{
+		content: "";
+		position:absolute;
+		top:2px;
+		left: 2px;
+		height:20px;
+		width:20px;
+		background: #fff;
+		border-radius:100%;
+		transition: all 0.2s;
+	}
+	&.active{
+		border:2px solid #6bc04b;
+		background: #6bc04b;
+		&:before{
+			left:28px;
+		}
+	}
+}
