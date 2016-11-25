@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		html,body{
+			height:100%;
+		}
+		#wrap{
+			height: 100%;
+			overflow: hidden;
+			/*清浮动*/
+		}
+		.left{
+			float: left;
+			width: 200px;
+			height: 100%;
+			background: blue;
+		}
+		.right{
+			position: relative;
+			height: 100%;
+			overflow: hidden;
+		}
+		.top{
+			position: absolute;
+			top: 0;
+			left:0;
+			width: 100%;
+			height: 100px;
+			background: red;
+		}
+		.main{
+			box-sizing: border-box;
+			height:100%;
+			padding:100px 0 0 0;
+		}
+		iframe{
+			display: block;
+			height:100%;
+			width: 100%;
+			border:none;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="left"></div>
+		<div class="right">
+			<div class="top"></div>
+			<div class="main">
+				<iframe src="temple.html"></iframe>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
