@@ -29,14 +29,15 @@ body {
   height: 100%;
 }
 .wrap {
+  position: relative;
   height: 100%;
+  overflow: auto;
+  background: #f5f5f5;
 }
 .temple-wrap {
   box-sizing: border-box;
   min-width: 1380px;
-  height: 100%;
   padding: 86px 50px 28px;
-  background: #f5f5f5;
   font-size: 16px;
 }
 .temple-wrap .tpl-nav {

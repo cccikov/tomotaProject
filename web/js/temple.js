@@ -1,5 +1,5 @@
 window.onload = function(){
-	var slideBtns = document.querySelectorAll(".slideBtn");
+	var slideBtns = document.querySelectorAll(".tpl-item .slideBtn");
 	for(let i in slideBtns){
 		slideBtns[i].onclick=function(e){
 			e.preventDefault();
