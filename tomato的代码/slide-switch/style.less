@@ -1,0 +1,31 @@
+
+// 滑动按钮
+.slideBtn{
+    position: relative;
+    display:inline-block;
+    width: 50px;
+    height: 24px;
+    border:2px solid #CDD5D7;
+    border-radius:50px;
+    background: #CDD5D7;
+    transition: all 0.2s;
+    cursor: pointer;
+    &:before{
+        content: "";
+        position:absolute;
+        top:2px;
+        left: 2px;
+        height:20px;
+        width:20px;
+        background: #fff;
+        border-radius:100%;
+        transition: all 0.2s;
+    }
+    &.active{
+        border:2px solid #6bc04b;
+        background: #6bc04b;
+        &:before{
+            left:28px;
+        }
+    }
+}
