@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹窗</title>
+	<style type="text/css">
+		html{
+			background: #ccc;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/win.css">
+</head>
+<body>
+	<div class="win">
+
+		<div class="win-top">
+			<h2>发送通知</h2>
+			<i></i>
+		</div>
+
+		<div class="win-main">
+			<!-- 模板名称 -->
+			<div class="win-item">
+				<span class="win-left">模板名称：</span>
+				<div class="win-right">
+					<input type="text">
+				</div>
+			</div>
+			<!-- 邮件主题 -->
+			<div class="win-item">
+				<span class="win-left">邮件主题：</span>
+				<div class="win-right">
+					<input type="text">
+				</div>
+			</div>
+			<!-- 邮件内容 -->
+			<div class="win-item">
+				<span class="win-left">邮件内容：</span>
+				<div class="win-right">
+					<div style="height: 200px;border:1px solid #888;border-radius: 2px;"></div>
+				</div>
+			</div>
+			<!-- 邮件签名 -->
+			<div class="win-item">
+				<span class="win-left">邮件签名：</span>
+				<div class="win-right">
+					<div style="height: 200px;border:1px solid #888;border-radius: 2px;"></div>
+				</div>
+			</div>
+			<!-- 是否默认 -->
+			<div class="win-item">
+				<span class="win-left">是否默认：</span>
+				<div class="win-right">
+					<label>
+						<input type="radio" name="default" checked="checked">是
+					</label>
+					<label>
+						<input type="radio" name="default">否
+					</label>
+				</div>
+			</div>
+			<!-- 按钮 -->
+			<div class="win-action">
+				<button class="win-sure">确定</button>
+				<button class="win-cancal">取消</button>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

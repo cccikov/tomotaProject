@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  background: #fff;
+  color: #212121;
+  font: 12px/1.5 'microsoft yahei', Verdana, Arial, 'simsun';
+}
+a {
+  text-decoration: none;
+  color: #212121;
+}
+a.important-link {
+  color: #0082ca;
+}
+.mouse-hover:hover {
+  text-decoration: underline;
+  color: #0082ca;
+}
+.win {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  font-size: 16px;
+}
+.win .win-top {
+  position: relative;
+  line-height: 50px;
+  background: #0082ca;
+  color: #fff;
+}
+.win .win-top h2 {
+  padding: 0 23px;
+  font-weight: normal;
+  font-size: 18px;
+}
+.win .win-top i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url(../img/close.png) center no-repeat;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+.win .win-top i:hover {
+  box-shadow: 2px 2px 5px rgba(9, 101, 152, 0.5), -2px -2px 5px rgba(9, 101, 152, 0.5), -2px 2px 5px rgba(9, 101, 152, 0.5), 2px -2px 5px rgba(9, 101, 152, 0.5);
+}
+.win .win-main {
+  padding: 15px 30px;
+}
+.win .win-main .win-item {
+  margin: 0 0 28px;
+}
+.win .win-main .win-item:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.win .win-main .win-item .win-left {
+  float: left;
+  width: 100px;
+  line-height: 32px;
+  color: #888888;
+  text-align: right;
+}
+.win .win-main .win-item .win-right {
+  padding: 0 0 0 8px;
+  overflow: hidden;
+}
+.win .win-main .win-item .win-right input[type="text"] {
+  width: 70%;
+  padding: 8px 12px;
+  border: 1px solid #888888;
+  border-radius: 2px;
+}
+.win .win-main .win-item .win-right label {
+  line-height: 32px;
+  margin: 0 20px 0 0;
+}
+.win .win-main .win-item .win-right label input {
+  margin: 0 5px 0 0;
+}
+.win .win-main .win-action {
+  text-align: center;
+  margin: 0 0 30px;
+}
+.win .win-main .win-action button {
+  width: 180px;
+  line-height: 38px;
+  margin: 0 10px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid #0082ca;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.win .win-main .win-action button.win-sure {
+  background: #fff;
+  color: #0082ca;
+}
+.win .win-main .win-action button.win-cancal {
+  background: #0082ca;
+  color: #fff;
+}

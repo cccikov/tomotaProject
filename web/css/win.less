@@ -1,0 +1,89 @@
+// 弹窗代码
+@import url(common.less);
+
+.win{
+	position: absolute;
+	top:50%;
+	left:50%;
+	width: 800px;
+	transform:translate(-50%,-50%);
+	background: #fff;
+	font-size:@fs16;
+	.win-top{
+		position: relative;
+		line-height: 50px;
+		background: @c-standard-a;
+		color:#fff;
+		h2{
+			padding:0 23px;
+			font-weight:normal;
+			font-size: @fs18;
+		}
+		i{
+			position:absolute;
+			top:50%;
+			right:20px;
+			width:20px;
+			height:20px;
+			background: url(../img/close.png) center no-repeat;
+			transform:translate(0,-50%);
+			cursor: pointer;
+			&:hover{
+				box-shadow: 2px 2px 5px rgba(9,101,152,0.5) , -2px -2px 5px rgba(9,101,152,0.5) ,-2px 2px 5px rgba(9,101,152,0.5),2px -2px 5px rgba(9,101,152,0.5);
+			}
+		}
+	}
+	.win-main{
+		padding: 15px 30px;
+		.win-item{
+			.clearfix();
+			margin:0 0 28px;
+			.win-left{
+				float: left;
+				width:100px;
+				line-height:32px;
+				color:@fc-b;
+				.tr();
+			}
+			.win-right{
+				padding:0 0 0 8px;
+				overflow: hidden;
+				input[type="text"]{
+					width:70%;
+					padding:8px 12px;
+					border: 1px solid @fc-b;
+					border-radius: 2px;
+				}
+				label{
+					line-height:32px;
+					margin: 0 20px 0 0;
+					input{
+						margin: 0 5px 0 0;
+					}
+				}
+			}
+		}
+		.win-action{
+			.tc();
+			margin: 0 0 30px;
+			button{
+				width:180px;
+				line-height:38px;
+				margin: 0 10px;
+				font-size:@fs16;
+				font-family: inherit;
+				border:1px solid @c-standard-a;
+				border-radius:2px;
+				cursor:pointer;
+				&.win-sure{
+					background: #fff;
+					color:@c-standard-a;
+				}
+				&.win-cancal{
+					background: @c-standard-a;
+					color:#fff;
+				}
+			}
+		}
+	}
+}
