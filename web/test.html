@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    var search = window.location.search.substr(1);
+    if (search == "") {
+        window.location.href = "test.html?a=1123123&p=2345&name=ccc"
+    }
+    urlParam = function(name,newVal) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); //以 name 开头或者以 "&"+name 开头，中间是 "=" + 若干个非&的字符 ,后面是结尾 或者 以 "&"结尾
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+        	var oldVal = r[2];
+        	if(newVal){
+        		return window.location.href.replace(name+"="+oldVal,name+"="+newVal);//一定要有属性名,为了避免修改了那些与这个值相同的其他参数
+        	}else{
+        		return unescape(oldVal)
+        	}
+        }
+        return null;
+    }
+    console.log(urlParam("p",12));
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
