@@ -14,6 +14,7 @@
     <script type="text/javascript" src='common.js'></script>
     <script type="text/javascript">
     $(function() {
+        //防止跳转页面的时候被浏览器记住勾选状态
         $("[type='checkbox']").each(function(item,key){
             key.checked = false;
         });
