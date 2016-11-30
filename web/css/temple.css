@@ -92,6 +92,7 @@ body {
 }
 .temple-wrap .tpl-main .tpl-list {
   display: table;
+  min-width: 100%;
   text-align: center;
 }
 .temple-wrap .tpl-main .tpl-list .tpl-title {

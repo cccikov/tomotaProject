@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    label {
+        display: block;
+        margin: 30px;
+    }
+    </style>
+    <script type="text/javascript" src='../jquery.min.js'></script>
+    <script type="text/javascript" src='common.js'></script>
+    <script type="text/javascript">
+    $(function() {
+        var hasCheckArr = ccc.getStorage('checkbox');
+        if (hasCheckArr) {
+            for (var i = 0; i < hasCheckArr.length; i++) {
+                if($('[name=' + hasCheckArr[i] + ']').size()>0){
+                    $('[name=' + hasCheckArr[i] + ']')[0].checked = true;
+                }
+            }
+        } else {
+            hasCheckArr = [];
+        }
+        $("input").on("change", function() {
+            var that = $(this);
+            var status = that[0].checked;
+            var id = that.attr("name");
+            if (status) {
+                hasCheckArr.push(id);
+            } else {
+                var item = hasCheckArr.indexOf(id);
+                hasCheckArr.splice(item, 1)
+            }
+            console.log(hasCheckArr);
+            ccc.setStorage("checkbox", hasCheckArr);
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <label>
+            <input type="checkbox" name="check11">11
+        </label>
+        <label>
+            <input type="checkbox" name="check12">12
+        </label>
+        <label>
+            <input type="checkbox" name="check13">13
+        </label>
+        <label>
+            <input type="checkbox" name="check14">14
+        </label>
+        <label>
+            <input type="checkbox" name="check15">15
+        </label>
+        <label>
+            <input type="checkbox" name="check16">16
+        </label>
+        <label>
+            <input type="checkbox" name="check17">17
+        </label>
+        <label>
+            <input type="checkbox" name="check18">18
+        </label>
+        <label>
+            <input type="checkbox" name="check19">19
+        </label>
+        <label>
+            <input type="checkbox" name="check20">20
+        </label>
+        <a href="a.html">上一页</a>
+    </div>
+</body>
+
+</html>

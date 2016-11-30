@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    label {
+        display: block;
+        margin: 30px;
+    }
+    </style>
+    <script type="text/javascript" src='../jquery.min.js'></script>
+    <script type="text/javascript" src='common.js'></script>
+    <script type="text/javascript">
+    $(function() {
+        var hasCheckArr = ccc.getStorage('checkbox');
+        if (hasCheckArr) {
+            for (var i = 0; i < hasCheckArr.length; i++) {
+                if ($('[name=' + hasCheckArr[i] + ']').size() > 0) {
+                    $('[name=' + hasCheckArr[i] + ']')[0].checked = true;
+                }
+            }
+        } else {
+            hasCheckArr = [];
+        }
+        $("input").on("change", function() {
+            var that = $(this);
+            var status = that[0].checked;
+            var id = that.attr("name");
+            if (status) {
+                hasCheckArr.push(id);
+            } else {
+                var item = hasCheckArr.indexOf(id);
+                hasCheckArr.splice(item, 1)
+            }
+            console.log(hasCheckArr);
+            ccc.setStorage("checkbox", hasCheckArr);
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <label>
+            <input type="checkbox" name="check01">01
+        </label>
+        <label>
+            <input type="checkbox" name="check02">02
+        </label>
+        <label>
+            <input type="checkbox" name="check03">03
+        </label>
+        <label>
+            <input type="checkbox" name="check04">04
+        </label>
+        <label>
+            <input type="checkbox" name="check05">05
+        </label>
+        <label>
+            <input type="checkbox" name="check06">06
+        </label>
+        <label>
+            <input type="checkbox" name="check07">07
+        </label>
+        <label>
+            <input type="checkbox" name="check08">08
+        </label>
+        <label>
+            <input type="checkbox" name="check09">09
+        </label>
+        <label>
+            <input type="checkbox" name="check10">10
+        </label>
+        <a href="b.html">下一页</a>
+    </div>
+</body>
+
+</html>
