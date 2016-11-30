@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>拖拽</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				width: 3000px;
+				height: 3000px;
+			}
+			#drag {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 50px;
+				height: 50px;
+				background-color: #000000;
+			}
+			#drag:hover {
+				cursor: move;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="drag">
+
+		</div>
+		<script type="text/javascript">
+			var drag = document.getElementById("drag");
+			new Drag(drag,function(){
+				console.log("在拖动");
+			});
+			function Drag(ele,cb){
+				var that = this;
+				ele.onmousedown = function(e) {
+					var event = e || window.event;
+					var mouseX = event.clientX - ele.offsetLeft;
+					var mouseY = event.clientY - ele.offsetTop;
+					document.onmousemove = function(e) {
+						var event = e || window.event;
+						var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+						var scrollLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+						var moveX = event.clientX - mouseX;
+						var moveY = event.clientY - mouseY;
+						if(moveX<=0+scrollLeft){
+							moveX=0+scrollLeft;
+						}else if(moveX>=document.documentElement.clientWidth-ele.offsetWidth+scrollLeft){
+							moveX=document.documentElement.clientWidth-ele.offsetWidth+scrollLeft;
+						}
+						if(moveY<=0+scrollTop){
+							moveY=0+scrollTop;
+						}else if(moveY>=document.documentElement.clientHeight-ele.offsetHeight+scrollTop){
+							moveY=document.documentElement.clientHeight-ele.offsetHeight+scrollTop;
+						}
+						that.move(moveX,moveY,cb);
+					}
+				}
+				document.onmouseup=function(){
+					document.onmousemove=null;
+				}
+				this.move = function(moveX,moveY,cb){
+					ele.style.left = moveX + "px";
+					ele.style.top = moveY + "px";
+					if(cb){
+						// 回调函数，相当于事件
+						cb();
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>
