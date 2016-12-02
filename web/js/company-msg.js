@@ -15,7 +15,7 @@ $(function(){
         var fileSuffix = fileName.slice(fileName.lastIndexOf(".")+1);//后缀
         if(fileSuffix != "jpg" && fileSuffix !="png" && fileSuffix !="gif" && fileSuffix !="bmp"){
             that.add(".file-name").val('');
-            alert("上传的文件格式错误，请上传格式为jpg、png的图片文件");
+            alert("上传的文件格式错误，请上传格式为jpg、png、bmp、gif的图片文件");
             return false;
         }
         $(".file-name").val(fileName);
