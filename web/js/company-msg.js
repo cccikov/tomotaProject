@@ -13,7 +13,7 @@ $(function(){
             var fileName = file.slice(file.lastIndexOf("\\")+1);
         }
         var fileSuffix = fileName.slice(fileName.lastIndexOf(".")+1);//后缀
-        if(fileSuffix != "jpg" && fileSuffix !="png"){
+        if(fileSuffix != "jpg" && fileSuffix !="png" && fileSuffix !="gif" && fileSuffix !="bmp"){
             that.add(".file-name").val('');
             alert("上传的文件格式错误，请上传格式为jpg、png的图片文件");
             return false;
