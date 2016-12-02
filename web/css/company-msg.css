@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  background: #fff;
+  color: #212121;
+  font: 12px/1.5 'microsoft yahei', Verdana, Arial, 'simsun';
+}
+a {
+  text-decoration: none;
+  color: #212121;
+}
+a.important-link {
+  color: #0082ca;
+}
+.mouse-hover:hover {
+  text-decoration: underline;
+  color: #0082ca;
+}
+a {
+  color: inherit;
+}
+html,
+body {
+  height: 100%;
+}
+.wrap {
+  position: relative;
+  height: 100%;
+  overflow: auto;
+  background: #f5f5f5;
+}
+.company-wrap {
+  box-sizing: border-box;
+  min-width: 1380px;
+  padding: 58px 50px 28px;
+  font-size: 16px;
+}
+.company-wrap .cm-nav {
+  margin: 27px 8px;
+  color: #888888;
+}
+.company-wrap .cm-nav span {
+  color: #0082ca;
+}
+.company-wrap .cm-main {
+  padding: 28px 26px;
+  background: #fff;
+  color: #888888;
+  text-align: center;
+}
+.company-wrap .cm-main div {
+  margin: 28px 0;
+}
+.company-wrap .cm-main div p {
+  display: inline-block;
+  margin: 0 0 0 -4em;
+}
+.company-wrap .cm-main div p:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.company-wrap .cm-main div p span {
+  float: left;
+  width: 6em;
+  line-height: 34px;
+  padding: 0 8px 0 0;
+  text-align: right;
+}
+.company-wrap .cm-main div p input {
+  width: 400px;
+  line-height: 32px;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid #888888;
+  color: inherit;
+}
+.company-wrap .cm-main div p.item-upload {
+  position: relative;
+}
+.company-wrap .cm-main div p.item-upload .upload {
+  position: absolute;
+  top: 0;
+  right: -116px;
+  width: 100px;
+  height: 34px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.company-wrap .cm-main div p.item-upload .upload span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  float: none;
+  width: 100px;
+  line-height: 34px;
+  padding: 0;
+  background: #0082ca;
+  text-align: center;
+}
+.company-wrap .cm-main div p.item-upload .upload input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.company-wrap .cm-main .cm-action {
+  margin: 60px 0 0;
+}
+.company-wrap .cm-main .cm-action button {
+  width: 180px;
+  line-height: 38px;
+  margin: 0 10px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid #0082ca;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.company-wrap .cm-main .cm-action button.cm-sure {
+  background: #0082ca;
+  color: #fff;
+}
+.company-wrap .cm-main .cm-action button.cm-cancal {
+  background: #fff;
+  color: #0082ca;
+}
