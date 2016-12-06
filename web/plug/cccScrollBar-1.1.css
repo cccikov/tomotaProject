@@ -1,0 +1,37 @@
+.cccScrollContent {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+}
+.sideBar {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  height: 100%;
+  width: 6px;
+  border-radius: 4px;
+  background: #ddd;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.sideBar .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 112px;
+  border-radius: 4px;
+  background: #666;
+}
+.sideBar .slider.animate {
+  transition: transform 0.3s;
+}
+.inBox.animate {
+  transition: transform 0.3s;
+}
+.sideBar.active {
+  display: block;
+}
+/*# sourceMappingURL=cccScrollBar-1.1.css.map */
