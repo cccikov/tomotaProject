@@ -1,14 +1,15 @@
 $(function(){
     // 待选管理员数据
-    var waitingData = [{"name":"admin01"},{"name":"admin02"},{"name":"admin03"},{"name":"admin04"},{"name":"admin05"},{"name":"admin06"},{"name":"admin07"},{"name":"admin08"},{"name":"admin09"},{"name":"admin10"},{"name":"admin11"},{"name":"admin12"},{"name":"admin13"},{"name":"admin14"},{"name":"admin15"},{"name":"admin16"},{"name":"admin17"},{"name":"admin18"},{"name":"admin19"},{"name":"admin20"},{"name":"admin21"},{"name":"admin22"},{"name":"admin23"},{"name":"admin24"},{"name":"admin25"},{"name":"admin26"},{"name":"admin27"},{"name":"admin28"},{"name":"admin29"},{"name":"admin30"},{"name":"admin31"},{"name":"admin32"},{"name":"admin33"},{"name":"admin34"},{"name":"admin35"},{"name":"admin36"},{"name":"admin37"},{"name":"admin38"},{"name":"admin39"},{"name":"admin40"},{"name":"admin41"},{"name":"admin42"},{"name":"admin43"},{"name":"admin44"},{"name":"admin45"},{"name":"admin46"},{"name":"admin47"},{"name":"admin48"},{"name":"admin49"},{"name":"admin50"}];
+    var waitingData = [{"id":51,"name":"admin51"}];
 
     //管理员数据
-    var data = [{"id":51,"name":"admin51"},{"id":52,"name":"admin52"},{"id":53,"name":"admin53"},{"id":55,"name":"admin55"},{"id":56,"name":"admin56"},{"id":57,"name":"admin57"}];
+    var data = [{"id":52,"name":"admin52"},{"id":53,"name":"admin53"},{"id":55,"name":"admin55"},{"id":56,"name":"admin56"},{"id":57,"name":"admin57"}];
 
     // 生成待选管理员
     function createWaitAdmin(data){
         $(".scroll1 li").remove();
         for(var i in data){
+            console.log(data[i]);
             $('<li data-id="'+data[i].id+'">'+data[i].name+'</li>').appendTo(".scroll1 ul");
         }
     }
@@ -23,8 +24,6 @@ $(function(){
         }
     }
     createAdmin(data);
-
-
 
 
 
@@ -94,13 +93,13 @@ $(function(){
          waitingData =[];//清空数据
         $(".scroll2 li").each(function(item,key){//操作管理员数据
             var obj = {};
-            obj.id = $(key).attr("id");
+            obj.id = $(key).attr("data-id");
             obj.name = $(key).html();
             data.push(obj);
         });
         $(".scroll1 li").each(function(item,key){//操作待选管理员数据
             var obj = {};
-            obj.id = $(key).attr("id");
+            obj.id = $(key).attr("data-id");
             obj.name = $(key).html();
             waitingData.push(obj);
         });
