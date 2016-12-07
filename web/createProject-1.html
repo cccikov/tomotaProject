@@ -5,6 +5,10 @@
 		<title>创建项目（第一步）</title>
 		<link rel="stylesheet" type="text/css" href="css/createProject-1.css">
 		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!-- 插件 -->
+		<link rel="stylesheet" type="text/css" href="plug/cccScrollBar-1.1.css">
+		<script type="text/javascript" src="plug/cccScrollBar-1.1.js"></script>
+		<script type="text/javascript" src="js/createProject-1.js"></script>
 	</head>
 	<body>
 		<div class="wrap">
@@ -116,6 +120,94 @@
 					<div class="cp1-action">
 						<button class="next">下一步</button>
 					</div>
+				</div>
+			</div>
+
+			<div class="mask" style="position: fixed;top:0;left:0;z-index:10;width:100%;height:100%;background: rgba(0,0,0,0.3)"></div>
+
+			<!-- 弹窗 -->
+			<div class="cp1-win">
+				<div class="cp1-win-top">
+					<h6>选择管理员</h6>
+					<a class="cp1-win-close"></a>
+				</div>
+				<div class="cp1-win-main">
+					<!-- 可选列表 -->
+					<div class="win-select left">
+						<p>可选</p>
+						<div class="win-scroll scroll1">
+							<ul class="cccScrollContent">
+								<li>admin01</li>
+								<li>admin02</li>
+								<li>admin03</li>
+								<li>admin04</li>
+								<li>admin05</li>
+								<li>admin06</li>
+								<li>admin07</li>
+								<li>admin08</li>
+								<li>admin09</li>
+								<li>admin10</li>
+								<li>admin11</li>
+								<li>admin12</li>
+								<li>admin13</li>
+								<li>admin14</li>
+								<li>admin15</li>
+								<li>admin16</li>
+								<li>admin17</li>
+								<li>admin18</li>
+								<li>admin19</li>
+								<li>admin20</li>
+								<li>admin21</li>
+								<li>admin22</li>
+								<li>admin23</li>
+								<li>admin24</li>
+								<li>admin25</li>
+								<li>admin26</li>
+								<li>admin27</li>
+								<li>admin28</li>
+								<li>admin29</li>
+								<li>admin30</li>
+								<li>admin31</li>
+								<li>admin32</li>
+								<li>admin33</li>
+								<li>admin34</li>
+								<li>admin35</li>
+								<li>admin36</li>
+								<li>admin37</li>
+								<li>admin38</li>
+								<li>admin39</li>
+								<li>admin40</li>
+								<li>admin41</li>
+								<li>admin42</li>
+								<li>admin43</li>
+								<li>admin44</li>
+								<li>admin45</li>
+								<li>admin46</li>
+								<li>admin47</li>
+								<li>admin48</li>
+								<li>admin49</li>
+								<li>admin50</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 已选列表 -->
+					<div class="win-select right">
+						<p>已选</p>
+						<div class="win-scroll scroll2">
+							<ul class="cccScrollContent">
+							</ul>
+						</div>
+					</div>
+					<div class="middle">
+						<p>
+							<a>=></a>
+							<a><=</a>
+						</p>
+					</div>
+				</div>
+				<div class="cp1-win-action">
+					<button class="blueBtn">确定</button>
+					<button class="whiteBtn">取消</button>
 				</div>
 			</div>
 		</div>

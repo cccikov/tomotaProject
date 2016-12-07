@@ -5,11 +5,11 @@ $.fn.extend({
 		var barobj = $('<div class="sideBar"><div class="slider"></div></div>');
 		var sliderobj = barobj.find(".slider");
 		barobj.appendTo(outobj);
-		
+
 		var docu = $(document);
 		//移动方法
 		function goTopFn(top) {
-			$(this).css("transform", "translate3d(0," + top + "px,0");
+			$(this).css("transform", "translate(0," + top + "px");
 		}
 
 		//获取移动多少的方法，changeTop为滚动条滑块移动的距离，animateFlag是否要动画，并调用移动方法实现最终的滚动
@@ -99,7 +99,7 @@ $.fn.extend({
 			}
 			posiMove(sliderTop, false);
 		});
-		
+
 		return outobj;
 	}
 });

@@ -18,6 +18,7 @@ input{
     color:#ddd;
 }
 
+// 创建项目第一步
 .cp1-wrap{
     // 创建项目（第一步）主要
     .cp1-main{
@@ -182,6 +183,93 @@ input{
                 font-size:@fs18;
                 font-weight: 700;
             }
+        }
+    }
+}
+
+
+// 弹窗
+.cp1-win{
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index: 100;
+    width:630px;
+    padding:0 0 50px;
+    background: #fff;
+    transform:translate(-50%,-50%);
+    .cp1-win-top{
+        background: @c-standard-a;
+        color:#fff;
+        h6{
+            line-height:55px;
+            padding:0 0 0 20px;
+            font-weight:normal;
+            font-size:@fs18;
+        }
+    }
+    .cp1-win-main{
+        padding:50px;
+        .clearfix();
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        // 中间按钮
+        .middle{
+            overflow:hidden;
+            line-height:310px;
+            p{
+                display:inline-block;
+                width:100%;
+                line-height:1.5em;
+                a{
+                    display:block;
+                    margin:15px 0;
+                    .tc();
+                    font-size: 20px;
+                    cursor:pointer;
+                    color:@c-standard-a;
+                }
+            }
+        }
+        //可选列表 已选列表
+        .win-select{
+            width:200px;
+            border: 1px solid @c-standard-a;
+            p{
+                line-height:39px;
+                padding:0 0 0 15px;
+                border-bottom:1px solid @c-standard-a;
+                color:@c-standard-a;
+            }
+            .win-scroll{
+                height:310px;
+                // 自定义滚动条
+                position: relative;
+                overflow: hidden;
+                li{
+                    line-height: 30px;
+                    text-indent: 15px;
+                    color:@fc-b;
+                    cursor:pointer;
+                }
+            }
+        }
+    }
+    .cp1-win-action{
+        .tc();
+        button{
+            width:180px;
+            height:53px;
+            line-height:53px;
+            border-radius:3px;
+            margin:0 10px 0;
+            font-size:@fs18;
+            font-family:inherit;
+            .tc();
         }
     }
 }

@@ -33,6 +33,7 @@ body {
   height: 100%;
   overflow: auto;
   background: #f5f5f5;
+  font-size: 16px;
 }
 .ifr-common-wrap {
   box-sizing: border-box;
@@ -54,4 +55,14 @@ body {
   padding: 28px 26px;
   background: #fff;
   color: #888888;
+}
+.blueBtn {
+  border: 1px solid #0082ca;
+  background: #0082ca;
+  color: #fff;
+}
+.whiteBtn {
+  border: 1px solid #0082ca;
+  background: #fff;
+  color: #0082ca;
 }
