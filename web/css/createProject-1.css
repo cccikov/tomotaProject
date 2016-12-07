@@ -1,0 +1,202 @@
+@import url(ifr-common.css);
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  background: #fff;
+  color: #212121;
+  font: 12px/1.5 'microsoft yahei', Verdana, Arial, 'simsun';
+}
+a {
+  text-decoration: none;
+  color: #212121;
+}
+a.important-link {
+  color: #0082ca;
+}
+.mouse-hover:hover {
+  text-decoration: underline;
+  color: #0082ca;
+}
+input {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ddd;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ddd;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ddd;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ddd;
+}
+.cp1-wrap .cp1-main .cp1-step:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cp1-wrap .cp1-main .cp1-step a {
+  float: left;
+  width: 32.66%;
+  height: 51px;
+  line-height: 51px;
+  border-radius: 5px;
+  background: #a8a8aa url(../img/bigArrow.png) left 38px top 0px no-repeat;
+  color: #fff;
+  font-size: 18px;
+}
+.cp1-wrap .cp1-main .cp1-step a:nth-of-type(1) {
+  margin: 0 1% 0 0;
+}
+.cp1-wrap .cp1-main .cp1-step a:nth-of-type(2) {
+  margin: 0 1% 0 0;
+}
+.cp1-wrap .cp1-main .cp1-step a strong {
+  display: inline-block;
+  width: 44px;
+  margin: -3px 16px 0 0;
+  text-align: center;
+  vertical-align: middle;
+  font: 31px Black;
+}
+.cp1-wrap .cp1-main .cp1-step a.active {
+  background-color: #0082ca;
+}
+.cp1-wrap .cp1-main .cp1-input {
+  padding: 15px 0 0;
+}
+.cp1-wrap .cp1-main .cp1-input:after {
+  content: "";
+  display: block;
+  width: 98%;
+  margin: 30px auto;
+  border-bottom: 1px dashed #939393;
+}
+.cp1-wrap .cp1-main .cp1-input .cp1-input-item {
+  margin: 26px 0;
+}
+.cp1-wrap .cp1-main .cp1-input .cp1-input-item:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cp1-wrap .cp1-main .cp1-input .cp1-input-item input.width600 {
+  width: 70%;
+  max-width: 630px;
+}
+.cp1-wrap .cp1-main .cp1-input .cp1-input-item .cp1-admin:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cp1-wrap .cp1-main .cp1-input .cp1-input-item .cp1-admin span {
+  float: left;
+  min-width: 118px;
+  line-height: 34px;
+  padding: 0 4px 0 12px;
+  border: 1px solid #6bc04b;
+  border-radius: 3px;
+  margin: 0 16px 16px 0;
+  background: #dbf0d4;
+  color: #6bc04b;
+  text-align: center;
+}
+.cp1-wrap .cp1-main .cp1-input .cp1-input-item .cp1-admin span i {
+  display: inline-block;
+  padding: 0 8px;
+  margin: -3px 0 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.cp1-wrap .cp1-main .cp1-input .cp1-input-item .cp1-admin a {
+  float: left;
+  width: 100px;
+  line-height: 36px;
+  background: #6bc04b;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.cp1-wrap .cp1-main .cp1-scan .cp1-scan-item {
+  margin: 26px 0;
+}
+.cp1-wrap .cp1-main .cp1-scan .cp1-scan-item:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cp1-wrap .cp1-main .cp1-scan .cp1-scan-item p {
+  line-height: 36px;
+}
+.cp1-wrap .cp1-main .cp1-scan .cp1-scan-item p .red {
+  color: #ff0000;
+}
+.cp1-wrap .cp1-main .cp1-scan .cp1-scan-item input.width300 {
+  width: 35%;
+  max-width: 330px;
+}
+.cp1-wrap .cp1-main .cp1-scan .cp1-scan-item a {
+  color: #3b8ede;
+  text-decoration: underline;
+}
+.cp1-wrap .cp1-main .cp1-scan .cp1-scan-item img {
+  margin: 5px 0 0 50px;
+}
+.cp1-wrap .cp1-main .left {
+  box-sizing: border-box;
+  float: left;
+  width: 26%;
+  line-height: 36px;
+  padding: 0 12px 0 0;
+  text-align: right;
+}
+.cp1-wrap .cp1-main .left.must:before {
+  content: "*";
+  display: inline-block;
+  margin: 0px 5px 0 0;
+  vertical-align: middle;
+  color: #ff5200;
+}
+.cp1-wrap .cp1-main .right {
+  float: right;
+  width: 74%;
+}
+.cp1-wrap .cp1-main .right input {
+  padding: 8px 12px;
+  border: 1px solid #888888;
+  border-radius: 3px;
+  font-size: 16px;
+}
+.cp1-wrap .cp1-main .right em {
+  margin: 0 8px 0 6px;
+}
+.cp1-wrap .cp1-main .cp1-action {
+  text-align: center;
+  margin: 20px 0;
+}
+.cp1-wrap .cp1-main .cp1-action .next {
+  display: inline-block;
+  width: 180px;
+  height: 44px;
+  line-height: 44px;
+  border: none;
+  border-radius: 2px;
+  background: #0082ca;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}

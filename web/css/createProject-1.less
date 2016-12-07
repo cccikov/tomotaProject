@@ -1,0 +1,184 @@
+@import url(common.less);
+@import url(ifr-common.css);
+input{
+    font-size:inherit;
+    font-family: inherit;
+    color:inherit;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#ddd;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#ddd;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#ddd;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#ddd;
+}
+
+.cp1-wrap{
+    // 创建项目（第一步）主要
+    .cp1-main{
+
+        // 步骤显示
+        .cp1-step{
+            .clearfix();
+            a{
+                float: left;
+                width: 32.66%;
+                height:51px;
+                line-height: 51px;
+                border-radius: 5px;
+                background: #A8A8AA url(../img/bigArrow.png) left 38px top 0px no-repeat;
+                color:#fff;
+                font-size: @fs18;
+                &:nth-of-type(1){
+                    margin:0 1% 0 0;
+                }
+                &:nth-of-type(2){
+                    margin:0 1% 0 0;
+                }
+                strong{
+                    display:inline-block;
+                    width:44px;
+                    margin:-3px 16px 0 0 ;
+                    text-align: center;
+                    vertical-align: middle;
+                    font:31px Black;
+                    // font-weight:700;
+                }
+            }
+            a.active{
+                background-color:#0082ca;
+            }
+        }
+
+        // 输入部分
+        .cp1-input{
+            padding:15px 0 0;
+            &:after{
+                content:"";
+                display:block;
+                width:98%;
+                margin: 30px auto;
+                border-bottom: 1px dashed #939393;
+            }
+            .cp1-input-item{
+                margin:26px 0;
+                .clearfix();
+                input.width600{
+                    width:70%;
+                    max-width: 630px;
+                }
+                .cp1-admin{
+                    .clearfix();
+                    span{
+                        float: left;
+                        min-width: 118px;
+                        line-height:34px;
+                        padding:0 4px 0 12px;
+                        border:1px solid #6bc04b;
+                        border-radius:3px;
+                        margin:0 16px 16px 0;
+                        background: #dbf0d4;
+                        color:#6bc04b;
+                        .tc();
+                        i{
+                            display:inline-block;
+                            padding:0 8px;
+                            margin:-3px 0 0 0;
+                            vertical-align:middle;
+                            cursor: pointer;
+                        }
+                    }
+                    a{
+                        float: left;
+                        width:100px;
+                        line-height:36px;
+                        background: #6bc04b;
+                        border-radius:5px;
+                        color:#fff;
+                        .tc();
+                        cursor:pointer;
+                    }
+                }
+            }
+
+        }
+
+        //扫描部分
+        .cp1-scan{
+            .cp1-scan-item{
+                margin:26px 0;
+                .clearfix();
+                p{
+                    line-height: 36px;
+                    .red{
+                        color:#ff0000;
+                    }
+                }
+                input.width300{
+                    width:35%;
+                    max-width: 330px;
+                }
+                a{
+                    color:#3b8ede;
+                    text-decoration:underline;
+                }
+                img{
+                    margin:5px 0 0 50px;
+                }
+            }
+        }
+
+        //输入和扫码共用部分
+        .left{
+            box-sizing: border-box;
+            float: left;
+            width:26%;
+            line-height:36px;
+            padding:0 12px 0 0;
+            .tr();
+            &.must:before{
+                content: "*";
+                display:inline-block;
+                margin:0px 5px 0 0;
+                vertical-align:middle;
+                color:#ff5200;
+            }
+        }
+        .right{
+            float: right;
+            width:74%;
+            input{
+                padding:8px 12px;
+                border:1px solid @fc-b;
+                border-radius:3px;
+                font-size:@fs16;
+            }
+            em{
+                margin:0 8px 0 6px;
+            }
+        }
+
+        // 下一步
+        .cp1-action{
+            .tc();
+            margin:20px 0;
+            .next{
+                display:inline-block;
+                width:180px;
+                height:44px;
+                line-height:44px;
+                border:none;
+                border-radius:2px;
+                background: @c-standard-a;
+                color:#fff;
+                font-size:@fs18;
+                font-weight: 700;
+            }
+        }
+    }
+}
