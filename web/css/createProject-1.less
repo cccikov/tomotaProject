@@ -17,6 +17,9 @@ input{
 :-ms-input-placeholder { /* Internet Explorer 10+ */
     color:#ddd;
 }
+.noSelect(){
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;
+}
 
 // 创建项目第一步
 .cp1-wrap{
@@ -198,7 +201,9 @@ input{
     padding:0 0 50px;
     background: #fff;
     transform:translate(-50%,-50%);
+    // top
     .cp1-win-top{
+        position:relative;
         background: @c-standard-a;
         color:#fff;
         h6{
@@ -207,8 +212,19 @@ input{
             font-weight:normal;
             font-size:@fs18;
         }
+        i{
+            position:absolute;
+            top:10px;
+            right:10px;
+            width:35px;
+            height:35px;
+            background: url(../img/close.png) center no-repeat;
+            cursor:pointer;
+        }
     }
+    // main
     .cp1-win-main{
+        .noSelect();
         padding:50px;
         .clearfix();
         .left{
@@ -251,20 +267,26 @@ input{
                 position: relative;
                 overflow: hidden;
                 li{
-                    line-height: 30px;
+                    line-height: 29px;
+                    border-bottom:1px solid #fff;
                     text-indent: 15px;
                     color:@fc-b;
                     cursor:pointer;
+                    &.active{
+                        background: @c-standard-a;
+                        color:#fff;
+                    }
                 }
             }
         }
     }
+    // 按钮组
     .cp1-win-action{
         .tc();
         button{
             width:180px;
-            height:53px;
-            line-height:53px;
+            height:43px;
+            line-height:43px;
             border-radius:3px;
             margin:0 10px 0;
             font-size:@fs18;

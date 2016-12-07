@@ -215,6 +215,7 @@ input {
   transform: translate(-50%, -50%);
 }
 .cp1-win .cp1-win-top {
+  position: relative;
   background: #0082ca;
   color: #fff;
 }
@@ -224,7 +225,20 @@ input {
   font-weight: normal;
   font-size: 18px;
 }
+.cp1-win .cp1-win-top i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background: url(../img/close.png) center no-repeat;
+  cursor: pointer;
+}
 .cp1-win .cp1-win-main {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   padding: 50px;
 }
 .cp1-win .cp1-win-main:after {
@@ -271,18 +285,23 @@ input {
   overflow: hidden;
 }
 .cp1-win .cp1-win-main .win-select .win-scroll li {
-  line-height: 30px;
+  line-height: 29px;
+  border-bottom: 1px solid #fff;
   text-indent: 15px;
   color: #888888;
   cursor: pointer;
+}
+.cp1-win .cp1-win-main .win-select .win-scroll li.active {
+  background: #0082ca;
+  color: #fff;
 }
 .cp1-win .cp1-win-action {
   text-align: center;
 }
 .cp1-win .cp1-win-action button {
   width: 180px;
-  height: 53px;
-  line-height: 53px;
+  height: 43px;
+  line-height: 43px;
   border-radius: 3px;
   margin: 0 10px 0;
   font-size: 18px;
