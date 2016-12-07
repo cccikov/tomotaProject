@@ -2,14 +2,18 @@ $.fn.extend({
 	cccScrollBar: function() {
 		var outobj = $(this);
 		var inobj = outobj.find(".cccScrollContent").eq(0);
-		var barobj = $('<div class="sideBar"><div class="slider"></div></div>');
+		if(outobj.find(".sideBar").size()>0){
+			barobj = outobj.find(".sideBar");//为了重新建滚动，比如内容改变的时候
+		}else{
+			var barobj = $('<div class="sideBar"><div class="slider"></div></div>');
+			barobj.appendTo(outobj);
+		}
 		var sliderobj = barobj.find(".slider");
-		barobj.appendTo(outobj);
 
 		var docu = $(document);
 		//移动方法
 		function goTopFn(top) {
-			$(this).css("transform", "translate(0," + top + "px");
+			$(this).css("transform", "translate(0," + top + "px");//不用3d是为了兼容ie9;
 		}
 
 		//获取移动多少的方法，changeTop为滚动条滑块移动的距离，animateFlag是否要动画，并调用移动方法实现最终的滚动
@@ -44,7 +48,7 @@ $.fn.extend({
 		/*
 		 * 点击
 		 */
-		barobj.on("mousedown", function(e) {
+		barobj.off("mousedown").on("mousedown", function(e) {
 			var e = e || window.event;
 			var that = $(this);
 
@@ -56,7 +60,7 @@ $.fn.extend({
 		/*
 		 * 滑动
 		 */
-		sliderobj.on("mousedown", function(e) {
+		sliderobj.off("mousedown").on("mousedown", function(e) {
 			var e = e || window.event;
 			e.stopPropagation();
 			e.preventDefault();
@@ -70,7 +74,7 @@ $.fn.extend({
 				posiMove(sliderTop, false);
 			});
 
-			docu.on("mouseup", function() {
+			docu.off("mouseup").on("mouseup", function() {
 				docu.off("mousemove");
 			});
 
@@ -79,7 +83,7 @@ $.fn.extend({
 		/*
 		 * 滚动 mousewheel--chrome ie; DOMMouseScroll--firefox
 		 */
-		outobj.on("mousewheel DOMMouseScroll", function(e) {
+		outobj.off("mousewheel").off("DOMMouseScroll").on("mousewheel DOMMouseScroll", function(e) {
 			var e = e || window.event;
 			e.stopPropagation();
 			e.preventDefault();
