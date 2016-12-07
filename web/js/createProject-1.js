@@ -1,6 +1,6 @@
 $(function(){
     // 待选管理员数据
-    var waitingData = [{"id":51,"name":"admin51"}];
+    var waitingData = [{"id":0,"name":"admin0"},{"id":1,"name":"admin1"},{"id":2,"name":"admin2"},{"id":3,"name":"admin3"},{"id":4,"name":"admin4"},{"id":5,"name":"admin5"},{"id":6,"name":"admin6"},{"id":7,"name":"admin7"},{"id":8,"name":"admin8"},{"id":9,"name":"admin9"},{"id":10,"name":"admin10"},{"id":11,"name":"admin11"},{"id":12,"name":"admin12"},{"id":13,"name":"admin13"},{"id":14,"name":"admin14"},{"id":15,"name":"admin15"},{"id":16,"name":"admin16"},{"id":17,"name":"admin17"},{"id":18,"name":"admin18"},{"id":19,"name":"admin19"},{"id":20,"name":"admin20"},{"id":21,"name":"admin21"},{"id":22,"name":"admin22"},{"id":23,"name":"admin23"},{"id":24,"name":"admin24"},{"id":25,"name":"admin25"},{"id":26,"name":"admin26"},{"id":27,"name":"admin27"},{"id":28,"name":"admin28"},{"id":29,"name":"admin29"},{"id":30,"name":"admin30"},{"id":31,"name":"admin31"},{"id":32,"name":"admin32"},{"id":33,"name":"admin33"},{"id":34,"name":"admin34"},{"id":35,"name":"admin35"},{"id":36,"name":"admin36"},{"id":37,"name":"admin37"},{"id":38,"name":"admin38"},{"id":39,"name":"admin39"},{"id":40,"name":"admin40"},{"id":41,"name":"admin41"},{"id":42,"name":"admin42"},{"id":43,"name":"admin43"},{"id":44,"name":"admin44"},{"id":45,"name":"admin45"},{"id":46,"name":"admin46"},{"id":47,"name":"admin47"},{"id":48,"name":"admin48"},{"id":49,"name":"admin49"}];
 
     //管理员数据
     var data = [{"id":52,"name":"admin52"},{"id":53,"name":"admin53"},{"id":55,"name":"admin55"},{"id":56,"name":"admin56"},{"id":57,"name":"admin57"}];
@@ -9,7 +9,6 @@ $(function(){
     function createWaitAdmin(data){
         $(".scroll1 li").remove();
         for(var i in data){
-            console.log(data[i]);
             $('<li data-id="'+data[i].id+'">'+data[i].name+'</li>').appendTo(".scroll1 ul");
         }
     }
