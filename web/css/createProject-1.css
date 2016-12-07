@@ -139,6 +139,10 @@ input {
   display: block;
   clear: both;
 }
+.cp1-wrap .cp1-main .cp1-scan .cp1-scan-item strong {
+  color: #000;
+  font-size: 17px;
+}
 .cp1-wrap .cp1-main .cp1-scan .cp1-scan-item p {
   line-height: 36px;
 }
