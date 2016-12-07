@@ -205,7 +205,8 @@ input {
   font-weight: 700;
 }
 .cp1-win {
-  position: absolute;
+  display: none;
+  position: fixed;
   top: 50%;
   left: 50%;
   z-index: 100;
@@ -213,6 +214,9 @@ input {
   padding: 0 0 50px;
   background: #fff;
   transform: translate(-50%, -50%);
+}
+.cp1-win.active {
+  display: block;
 }
 .cp1-win .cp1-win-top {
   position: relative;

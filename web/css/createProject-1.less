@@ -193,7 +193,11 @@ input{
 
 // 弹窗
 .cp1-win{
-    position:absolute;
+    &.active{
+        display:block;
+    }
+    display:none;
+    position:fixed;
     top:50%;
     left:50%;
     z-index: 100;
