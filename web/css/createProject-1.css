@@ -75,6 +75,34 @@ input {
 .cp1-wrap .cp1-main .cp1-step a.active {
   background-color: #0082ca;
 }
+.cp1-wrap .cp1-main .left {
+  box-sizing: border-box;
+  float: left;
+  width: 26%;
+  line-height: 36px;
+  padding: 0 12px 0 0;
+  text-align: right;
+}
+.cp1-wrap .cp1-main .left.must:before {
+  content: "*";
+  display: inline-block;
+  margin: 0px 5px 0 0;
+  vertical-align: middle;
+  color: #ff5200;
+}
+.cp1-wrap .cp1-main .right {
+  float: right;
+  width: 74%;
+}
+.cp1-wrap .cp1-main .right input {
+  padding: 8px 12px;
+  border: 1px solid #888888;
+  border-radius: 3px;
+  font-size: 16px;
+}
+.cp1-wrap .cp1-main .right em {
+  margin: 0 8px 0 6px;
+}
 .cp1-wrap .cp1-main .cp1-input {
   padding: 15px 0 0;
 }
@@ -159,34 +187,6 @@ input {
 }
 .cp1-wrap .cp1-main .cp1-scan .cp1-scan-item img {
   margin: 5px 0 0 50px;
-}
-.cp1-wrap .cp1-main .left {
-  box-sizing: border-box;
-  float: left;
-  width: 26%;
-  line-height: 36px;
-  padding: 0 12px 0 0;
-  text-align: right;
-}
-.cp1-wrap .cp1-main .left.must:before {
-  content: "*";
-  display: inline-block;
-  margin: 0px 5px 0 0;
-  vertical-align: middle;
-  color: #ff5200;
-}
-.cp1-wrap .cp1-main .right {
-  float: right;
-  width: 74%;
-}
-.cp1-wrap .cp1-main .right input {
-  padding: 8px 12px;
-  border: 1px solid #888888;
-  border-radius: 3px;
-  font-size: 16px;
-}
-.cp1-wrap .cp1-main .right em {
-  margin: 0 8px 0 6px;
 }
 .cp1-wrap .cp1-main .cp1-action {
   text-align: center;

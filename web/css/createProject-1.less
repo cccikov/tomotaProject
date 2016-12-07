@@ -55,6 +55,36 @@ input{
             }
         }
 
+        //输入和扫码共用部分
+        .left{
+            box-sizing: border-box;
+            float: left;
+            width:26%;
+            line-height:36px;
+            padding:0 12px 0 0;
+            .tr();
+            &.must:before{
+                content: "*";
+                display:inline-block;
+                margin:0px 5px 0 0;
+                vertical-align:middle;
+                color:#ff5200;
+            }
+        }
+        .right{
+            float: right;
+            width:74%;
+            input{
+                padding:8px 12px;
+                border:1px solid @fc-b;
+                border-radius:3px;
+                font-size:@fs16;
+            }
+            em{
+                margin:0 8px 0 6px;
+            }
+        }
+
         // 输入部分
         .cp1-input{
             padding:15px 0 0;
@@ -105,7 +135,6 @@ input{
                     }
                 }
             }
-
         }
 
         //扫描部分
@@ -134,36 +163,6 @@ input{
                 img{
                     margin:5px 0 0 50px;
                 }
-            }
-        }
-
-        //输入和扫码共用部分
-        .left{
-            box-sizing: border-box;
-            float: left;
-            width:26%;
-            line-height:36px;
-            padding:0 12px 0 0;
-            .tr();
-            &.must:before{
-                content: "*";
-                display:inline-block;
-                margin:0px 5px 0 0;
-                vertical-align:middle;
-                color:#ff5200;
-            }
-        }
-        .right{
-            float: right;
-            width:74%;
-            input{
-                padding:8px 12px;
-                border:1px solid @fc-b;
-                border-radius:3px;
-                font-size:@fs16;
-            }
-            em{
-                margin:0 8px 0 6px;
             }
         }
 
