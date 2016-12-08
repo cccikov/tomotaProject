@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建项目（第二步）</title>
+		<link rel="stylesheet" type="text/css" href="css/createProject-2.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!-- 插件 -->
+		<link rel="stylesheet" type="text/css" href="plug/cccScrollBar-1.1.css">
+		<script type="text/javascript" src="plug/cccScrollBar-1.1.js"></script>
+
+		<script type="text/javascript" src="js/createProject-2.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div style="background: #e3e3e3;height:58px;position: absolute;width: 100%;">
+			</div>
+
+			<div class="cp2-wrap ifr-common-wrap">
+
+				<!-- 创建项目（第二步）-导航部分 -->
+				<p class="ifr-common-nav">
+					<a href="###">项目管理</a>&gt;<a href="###">项目列表</a>&gt;<span>创建项目</span>
+				</p>
+
+				<!-- 创建项目（第二步）-主要 -->
+				<div class="cp2-main ifr-common-main">
+
+					<!-- 步骤显示 -->
+					<div class="cp2-step">
+						<a href="###"><strong>1</strong>设置项目信息</a>
+						<a href="###" class="active"><strong>2</strong>选择试卷</a>
+						<a href="###"><strong>3</strong>完成创建</a>
+					</div>
+
+					<!-- 已选试卷 begin -->
+					<div class="chosen">
+						<h2 class="cp2-title">已选试卷</h2>
+						<!-- 已选试卷-列表 -->
+						<ul class="chosen-list">
+
+							<li class="chosen-item">
+								<!-- 试题名字 -->
+								<h5 class="item-name"><span>初级技术人员水平考试</span><a class="item-del"><i></i>删除</a></h5>
+								<!-- 考试规则-各个部分-->
+								<div class="item-part">
+									<span class="left">是否统一交卷：</span>
+									<div class="right">
+										<label><input type="radio" name="">统一时点交卷</label>
+										<label><input type="radio" name="">按试卷时长交卷</label>
+									</div>
+								</div>
+								<div class="item-part">
+									<span class="left must">考试起止时间：</span>
+									<div class="right">
+										<input type="" name=""><em>--</em><input type="" name="">
+									</div>
+								</div>
+								<div class="item-part">
+									<span class="left">开考</span>
+									<div class="right">
+										<input type="text" name="">分钟后不允许进入答
+									</div>
+								</div>
+								<div class="item-part">
+									<span class="left">页面切换次数超过</span>
+									<div class="right">
+										<input type="text" name="">次时终止考试
+									</div>
+								</div>
+								<!-- 考官部分 -->
+								<div class="item-part master-part">
+									<span class="left">选择考官：</span>
+									<div class="master right">
+										<span data-id="51">admin51<i>X</i></span>
+										<a class="win-open">请选择...</a>
+									</div>
+								</div>
+							</li>
+
+							<li class="chosen-item">
+								<h5 class="item-name"><span>初级技术人员水平考试</span><a class="item-del"><i></i>删除</a></h5>
+								<div class="item-part">
+									<span class="left">是否统一交卷：</span>
+									<div class="right">
+										<label><input type="radio" name="">统一时点交卷</label>
+										<label><input type="radio" name="">按试卷时长交卷</label>
+									</div>
+								</div>
+								<div class="item-part">
+									<span class="left must">考试起止时间：</span>
+									<div class="right">
+										<input type="" name=""><em>--</em><input type="" name="">
+									</div>
+								</div>
+								<div class="item-part">
+									<span class="left">开考</span>
+									<div class="right">
+										<input type="text" name="">分钟后不允许进入答
+									</div>
+								</div>
+								<div class="item-part">
+									<span class="left">页面切换次数超过</span>
+									<div class="right">
+										<input type="text" name="">次时终止考试
+									</div>
+								</div>
+								<div class="item-part master-part">
+									<span class="left">选择考官：</span>
+									<div class="master right">
+										<span data-id="51">admin51<i>X</i></span>
+										<a class="win-open">请选择...</a>
+									</div>
+								</div>
+							</li>
+
+						</ul>
+					</div><!-- 已选试卷 end -->
+
+					<!-- 试卷库 -->
+					<div class="storage">
+						<h2 class="cp2-title">试卷库</h2>
+						<!-- 试卷库-列表 -->
+						<ul>
+							<li>
+								<p><input type="checkbox" name=""></p>
+								<p>初级技术人员水平考试</p>
+								<p>25</p>
+								<p>100</p>
+								<p>60</p>
+								<p>10</p>
+								<p>admin</p>
+								<p>2016-11-01 12:00:00</p>
+								<p>启用</p>
+							</li>
+							<li>
+								<p><input type="checkbox" name=""></p>
+								<p>初级技术人员水平考试</p>
+								<p>25</p>
+								<p>100</p>
+								<p>60</p>
+								<p>10</p>
+								<p>admin</p>
+								<p>2016-11-01 12:00:00</p>
+								<p>启用</p>
+							</li>
+							<li>
+								<p><input type="checkbox" name=""></p>
+								<p>初级技术人员水平考试</p>
+								<p>25</p>
+								<p>100</p>
+								<p>60</p>
+								<p>10</p>
+								<p>admin</p>
+								<p>2016-11-01 12:00:00</p>
+								<p>启用</p>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 创建新项目-第二步-按钮组 -->
+					<div class="cp2-action">
+						<button class="whiteBtn">保存</button>
+						<button class="blueBtn">下一步</button>
+					</div>
+
+				</div><!-- cp2-main end -->
+			</div><!-- cp2-wrap end -->
+
+			<!-- 弹窗 -->
+			<div class="cp1-win">
+				<!-- top -->
+				<div class="cp1-win-top">
+					<h6>选择管理员</h6>
+					<i class="cp1-win-close"></i>
+				</div>
+				<!-- main -->
+				<div class="cp1-win-main">
+					<!-- 可选列表 -->
+					<div class="win-select left">
+						<p>可选</p>
+						<div class="win-scroll scroll1">
+							<ul class="cccScrollContent">
+								<li data-id="01">admin01</li>
+								<li data-id="02">admin02</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 已选列表 -->
+					<div class="win-select right">
+						<p>已选</p>
+						<div class="win-scroll scroll2">
+							<ul class="cccScrollContent">
+							</ul>
+						</div>
+					</div>
+					<div class="middle">
+						<p>
+							<a class="toright">=></a>
+							<a class="toleft"><=</a>
+						</p>
+					</div>
+				</div>
+				<!-- 按钮组 -->
+				<div class="cp1-win-action">
+					<button class="blueBtn sure">确定</button>
+					<button class="whiteBtn cancel">取消</button>
+				</div>
+			</div><!-- 弹窗 end -->
+		</div><!-- wrap end -->
+
+	</body>
+</html>

@@ -1,0 +1,361 @@
+@import url(ifr-common.css);
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  background: #fff;
+  color: #212121;
+  font: 12px/1.5 'microsoft yahei', Verdana, Arial, 'simsun';
+}
+a {
+  text-decoration: none;
+  color: #212121;
+}
+a.important-link {
+  color: #0082ca;
+}
+.mouse-hover:hover {
+  text-decoration: underline;
+  color: #0082ca;
+}
+input {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ddd;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ddd;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ddd;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ddd;
+}
+/* 创建项目第一步 begin */
+.cp2-wrap {
+  /* 创建项目（第一步）-主要 begin */
+}
+.cp2-wrap .cp2-main {
+  /* 步骤显示 begin */
+  /* 已选试卷 begin */
+  /* 试卷库 begin */
+  /* 创建新项目-第二步-按钮组 begin */
+}
+.cp2-wrap .cp2-main .cp2-step:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cp2-wrap .cp2-main .cp2-step a {
+  float: left;
+  width: 32.66%;
+  height: 51px;
+  line-height: 51px;
+  border-radius: 5px;
+  background: #a8a8aa url(../img/bigArrow.png) left 38px top 0px no-repeat;
+  color: #fff;
+  font-size: 18px;
+}
+.cp2-wrap .cp2-main .cp2-step a:nth-of-type(1) {
+  margin: 0 1% 0 0;
+}
+.cp2-wrap .cp2-main .cp2-step a:nth-of-type(2) {
+  margin: 0 1% 0 0;
+}
+.cp2-wrap .cp2-main .cp2-step a strong {
+  display: inline-block;
+  width: 44px;
+  margin: -3px 16px 0 0;
+  text-align: center;
+  vertical-align: middle;
+  font: 31px Black;
+}
+.cp2-wrap .cp2-main .cp2-step a.active {
+  background-color: #0082ca;
+}
+.cp2-wrap .cp2-main .chosen .cp2-title {
+  line-height: 50px;
+  padding: 0 20px 0;
+  margin: 25px 0 0;
+  background: #e3e3e3;
+  font-size: 18px;
+  color: #a2a2a2;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item {
+  padding: 20px 20px 0px;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item:nth-of-type(n+2) {
+  border-top: 1px dashed #888888;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-name {
+  position: relative;
+  color: #fff;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-name span {
+  position: relative;
+  display: inline-block;
+  line-height: 30px;
+  padding: 0 5px 0 10px;
+  background: #6bc04b;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-name span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: #6bc04b;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-name span:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: -6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background: #fff;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-name .item-del {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 30px;
+  padding: 0 10px;
+  background: #6bc04b;
+  color: inherit;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-name .item-del i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: -3px 5px 0 0;
+  vertical-align: middle;
+  background: #f00;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part {
+  margin: 22px 0;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part:nth-of-type(1) label {
+  margin: 0 15px 0 0;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part:nth-of-type(3) input,
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part:nth-of-type(4) input {
+  width: 95px;
+  margin: 0 12px 0 0;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part .left {
+  float: left;
+  width: 168px;
+  line-height: 35px;
+  text-align: right;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part .right {
+  line-height: 35px;
+  padding: 0 0 0 12px;
+  overflow: hidden;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part .right.master:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part .right.master span {
+  float: left;
+  min-width: 118px;
+  line-height: 34px;
+  padding: 0 4px 0 12px;
+  border: 1px solid #6bc04b;
+  border-radius: 3px;
+  margin: 0 16px 16px 0;
+  background: #dbf0d4;
+  color: #6bc04b;
+  text-align: center;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part .right.master span i {
+  display: inline-block;
+  padding: 0 8px;
+  margin: -3px 0 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part .right.master a {
+  float: left;
+  width: 100px;
+  line-height: 36px;
+  background: #6bc04b;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part .right input {
+  line-height: 33px;
+  padding: 0 12px;
+  border: 1px solid #888888;
+  border-radius: 3px;
+}
+.cp2-wrap .cp2-main .chosen .chosen-item .item-part .right em {
+  margin: 0 8px 0 6px;
+}
+.cp2-wrap .cp2-main .storage .cp2-title {
+  line-height: 50px;
+  padding: 0 20px 0;
+  margin: 25px 0 0;
+  background: #e3e3e3;
+  font-size: 18px;
+  color: #a2a2a2;
+}
+.cp2-wrap .cp2-main .storage ul {
+  display: table;
+  width: 100%;
+  margin: 20px 0 20px 0;
+  text-align: center;
+}
+.cp2-wrap .cp2-main .storage ul li {
+  display: table-row;
+}
+.cp2-wrap .cp2-main .storage ul li:nth-of-type(1) p {
+  border-top: 1px solid #888888;
+}
+.cp2-wrap .cp2-main .storage ul li:nth-last-of-type(1) p {
+  border-bottom: 1px solid #888888;
+}
+.cp2-wrap .cp2-main .storage ul li p {
+  display: table-cell;
+  padding: 12px 0 ;
+  border-bottom: 1px dashed #888888;
+  vertical-align: middle;
+}
+.cp2-wrap .cp2-main .cp2-action {
+  text-align: center;
+}
+.cp2-wrap .cp2-main .cp2-action button {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 10px;
+  font: inherit;
+}
+.cp1-win {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  width: 630px;
+  padding: 0 0 50px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+}
+.cp1-win.active {
+  display: block;
+}
+.cp1-win .cp1-win-top {
+  position: relative;
+  background: #0082ca;
+  color: #fff;
+}
+.cp1-win .cp1-win-top h6 {
+  line-height: 55px;
+  padding: 0 0 0 20px;
+  font-weight: normal;
+  font-size: 18px;
+}
+.cp1-win .cp1-win-top i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background: url(../img/close.png) center no-repeat;
+  cursor: pointer;
+}
+.cp1-win .cp1-win-main {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 50px;
+}
+.cp1-win .cp1-win-main:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cp1-win .cp1-win-main .left {
+  float: left;
+}
+.cp1-win .cp1-win-main .right {
+  float: right;
+}
+.cp1-win .cp1-win-main .middle {
+  overflow: hidden;
+  line-height: 310px;
+}
+.cp1-win .cp1-win-main .middle p {
+  display: inline-block;
+  width: 100%;
+  line-height: 1.5em;
+}
+.cp1-win .cp1-win-main .middle p a {
+  display: block;
+  margin: 15px 0;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: #0082ca;
+}
+.cp1-win .cp1-win-main .win-select {
+  width: 200px;
+  border: 1px solid #0082ca;
+}
+.cp1-win .cp1-win-main .win-select p {
+  line-height: 39px;
+  padding: 0 0 0 15px;
+  border-bottom: 1px solid #0082ca;
+  color: #0082ca;
+}
+.cp1-win .cp1-win-main .win-select .win-scroll {
+  height: 310px;
+  position: relative;
+  overflow: hidden;
+}
+.cp1-win .cp1-win-main .win-select .win-scroll li {
+  line-height: 29px;
+  border-bottom: 1px solid #fff;
+  text-indent: 15px;
+  color: #888888;
+  cursor: pointer;
+}
+.cp1-win .cp1-win-main .win-select .win-scroll li.active {
+  background: #0082ca;
+  color: #fff;
+}
+.cp1-win .cp1-win-action {
+  text-align: center;
+}
+.cp1-win .cp1-win-action button {
+  width: 180px;
+  height: 43px;
+  line-height: 43px;
+  border-radius: 3px;
+  margin: 0 10px 0;
+  font-size: 18px;
+  font-family: inherit;
+  text-align: center;
+}

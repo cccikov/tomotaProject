@@ -1,0 +1,380 @@
+@import url(common.less);
+@import url(ifr-common.css);
+input {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #ddd;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #ddd;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #ddd;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #ddd;
+}
+
+.noSelect() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+// title共用
+.cp2-title() {
+    line-height: 50px;
+    padding: 0 20px 0;
+    margin: 25px 0 0;
+    background: @c-gray-c;
+    font-size: @fs18;
+    color: #a2a2a2;
+}
+@cellWidth:6.25%;//就是行分了16份
+
+/* 创建项目第一步 begin */
+.cp2-wrap {
+
+    /* 创建项目（第一步）-主要 begin */
+    .cp2-main {
+
+       /* 步骤显示 begin */
+        .cp2-step {
+            .clearfix();
+            a {
+                float: left;
+                width: 32.66%;
+                height: 51px;
+                line-height: 51px;
+                border-radius: 5px;
+                background: #A8A8AA url(../img/bigArrow.png) left 38px top 0px no-repeat;
+                color: #fff;
+                font-size: @fs18;
+                &:nth-of-type(1) {
+                    margin: 0 1% 0 0;
+                }
+                &:nth-of-type(2) {
+                    margin: 0 1% 0 0;
+                }
+                strong {
+                    display: inline-block;
+                    width: 44px;
+                    margin: -3px 16px 0 0;
+                    text-align: center;
+                    vertical-align: middle;
+                    font: 31px Black;
+                }
+            }
+            a.active {
+                background-color: #0082ca;
+            }
+        }//步骤显示 end
+
+        /* 已选试卷 begin */
+        .chosen {
+            .cp2-title {
+                .cp2-title();
+            }
+            //已选试卷-列表
+            .chosen-item {
+                padding: 20px 20px 0px;
+                &:nth-of-type(n+2) {
+                    border-top: 1px dashed @fc-b;
+                }
+                //试题名字
+                .item-name {
+                    position: relative;
+                    color: #fff;
+                    span {
+                        position: relative;
+                        display: inline-block;
+                        line-height: 30px;
+                        padding: 0 5px 0 10px;
+                        background: #6bc04b;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: -30px;
+                            border-width: 15px;
+                            border-style: solid;
+                            border-color: transparent;
+                            border-left-color: #6bc04b;
+                        }
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 12px;
+                            right: -6px;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 3px;
+                            background: #fff;
+                        }
+                    }
+                    .item-del {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        line-height: 30px;
+                        padding: 0 10px;
+                        background: #6bc04b;
+                        color: inherit;
+                        i {
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            margin: -3px 5px 0 0;
+                            vertical-align: middle;
+                            background: #f00;
+                        }
+                    }
+                }
+                //考试规则-各个部分
+                .item-part {
+                    margin: 22px 0;
+                    &:nth-of-type(1) {
+                        label {
+                            margin: 0 15px 0 0;
+                        }
+                    }
+                    &:nth-of-type(3),
+                    &:nth-of-type(4) {
+                        input {
+                            width: 95px;
+                            margin: 0 12px 0 0;
+                        }
+                    }
+                    .left {
+                        float: left;
+                        width: 168px;
+                        line-height: 35px;
+                        .tr();
+                    }
+                    .right {
+                        line-height: 35px;
+                        padding: 0 0 0 12px;
+                        overflow: hidden;
+                        // 考官部分 right
+                        &.master {
+                            .clearfix();
+                            span {
+                                float: left;
+                                min-width: 118px;
+                                line-height: 34px;
+                                padding: 0 4px 0 12px;
+                                border: 1px solid #6bc04b;
+                                border-radius: 3px;
+                                margin: 0 16px 16px 0;
+                                background: #dbf0d4;
+                                color: #6bc04b;
+                                .tc();
+                                i {
+                                    display: inline-block;
+                                    padding: 0 8px;
+                                    margin: -3px 0 0 0;
+                                    vertical-align: middle;
+                                    cursor: pointer;
+                                }
+                            }
+                            a {
+                                float: left;
+                                width: 100px;
+                                line-height: 36px;
+                                background: #6bc04b;
+                                border-radius: 5px;
+                                color: #fff;
+                                .tc();
+                                cursor: pointer;
+                            }
+                        }
+                        input {
+                            line-height: 33px;
+                            padding: 0 12px;
+                            border: 1px solid @fc-b;
+                            border-radius: 3px;
+                        }
+                        em {
+                            margin: 0 8px 0 6px;
+                        }
+                    }
+                }
+            }//已选试卷-列表 end
+        }//已选试卷 end
+
+        /* 试卷库 begin */
+        .storage {
+            .cp2-title {
+                .cp2-title();
+            }
+            //试卷库-列表
+            ul{
+                display:table;
+                width:100%;
+                margin:20px 0 20px 0;
+                .tc();
+                li{
+                    display:table-row;
+                    &:nth-of-type(1){
+                        p{
+                            border-top: 1px solid @fc-b
+                        }
+                    }
+                    &:nth-last-of-type(1){
+                        p{
+                            border-bottom: 1px solid @fc-b
+                        }
+                    }
+                    p{
+                        display:table-cell;
+                        padding:12px 0 ;
+                        border-bottom:1px dashed @fc-b;
+                        vertical-align:middle;
+                        // width:@cellWidth;
+                        &:nth-of-type(2){
+                            // width:6*@cellWidth;
+                        }
+                        &:nth-last-of-type(2){
+                            // width:3*@cellWidth;
+                        }
+                    }
+                }
+            }
+        }//试卷库 end
+
+        /* 创建新项目-第二步-按钮组 begin */
+        .cp2-action{
+            .tc();
+            button{
+                width:180px;
+                height:40px;
+                line-height:40px;
+                margin:0 10px;
+                font:inherit;
+            }
+        }//创建新项目-第二步-按钮组 end
+
+    }// 创建项目（第一步）-主要 end
+}// 创建项目第一步 end
+
+
+// 弹窗
+.cp1-win{
+    &.active{
+        display:block;
+    }
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    z-index: 100;
+    width:630px;
+    padding:0 0 50px;
+    background: #fff;
+    transform:translate(-50%,-50%);
+    // top
+    .cp1-win-top{
+        position:relative;
+        background: @c-standard-a;
+        color:#fff;
+        h6{
+            line-height:55px;
+            padding:0 0 0 20px;
+            font-weight:normal;
+            font-size:@fs18;
+        }
+        i{
+            position:absolute;
+            top:10px;
+            right:10px;
+            width:35px;
+            height:35px;
+            background: url(../img/close.png) center no-repeat;
+            cursor:pointer;
+        }
+    }
+    // main
+    .cp1-win-main{
+        .noSelect();
+        padding:50px;
+        .clearfix();
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        // 中间按钮
+        .middle{
+            overflow:hidden;
+            line-height:310px;
+            p{
+                display:inline-block;
+                width:100%;
+                line-height:1.5em;
+                a{
+                    display:block;
+                    margin:15px 0;
+                    .tc();
+                    font-size: 20px;
+                    cursor:pointer;
+                    color:@c-standard-a;
+                }
+            }
+        }
+        //可选列表 已选列表
+        .win-select{
+            width:200px;
+            border: 1px solid @c-standard-a;
+            p{
+                line-height:39px;
+                padding:0 0 0 15px;
+                border-bottom:1px solid @c-standard-a;
+                color:@c-standard-a;
+            }
+            .win-scroll{
+                height:310px;
+                // 自定义滚动条
+                position: relative;
+                overflow: hidden;
+                li{
+                    line-height: 29px;
+                    border-bottom:1px solid #fff;
+                    text-indent: 15px;
+                    color:@fc-b;
+                    cursor:pointer;
+                    &.active{
+                        background: @c-standard-a;
+                        color:#fff;
+                    }
+                }
+            }
+        }
+    }
+    // 按钮组
+    .cp1-win-action{
+        .tc();
+        button{
+            width:180px;
+            height:43px;
+            line-height:43px;
+            border-radius:3px;
+            margin:0 10px 0;
+            font-size:@fs18;
+            font-family:inherit;
+            .tc();
+        }
+    }
+}
