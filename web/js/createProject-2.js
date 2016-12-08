@@ -17,7 +17,6 @@ $(function(){
 
     //生成外部-考官
     function createAdmin(masterWrapEle,data){
-        console.log(masterWrapEle);
         masterWrapEle.find("span").remove();
         for(var i in data){
             $('<span data-id="'+data[i].id+'">'+data[i].name+'<i>X</i></span>').insertBefore(masterWrapEle.find("a"));
@@ -56,7 +55,6 @@ $(function(){
 
     // 将选择考官封装成函数
     function examSelect(oriBigData,examId,openWinBtnEle,masterWrapEle,num){
-        console.log(num);
         //进入页面的时候生成外部-考官
         createAdmin(masterWrapEle,oriBigData[examId].chosen);
 
@@ -95,7 +93,7 @@ $(function(){
             // 由于是共用同一个弹窗,所以不能一固定让 $(".sure")按钮固定绑定一个事件,因为有个createAdmin()里面需要不同的ele,和数据;如果是固定死一个事件,就会只执行最后一个事件,而删除前面的事件,就会造成无论操作那一组数据,改变的都是最后一组。所以就要在openwin按钮点击的时候再绑定事件。
             /*数据操作*/
             // 弹窗 确定按钮 数据操作
-            $(".sure").off("click").on("click",function(){
+            $(".sure").off("click").on("click",function(){//这个事件绑定存在于一个函数里面, $(".sure")是共用,而它的事件函数中的表达,有使用到外部函数的两个参数masterWrapEle,oriBigData[examId].chosen;而这两个参数是会变的,会根据不同的函数执行传入的值不同而改变,但是对象却是同一个,所以就会造成,这个事件触发的时候永远都是执行最后一个绑定的事件函数。所以就要在openwin按钮点击在绑定事件，这样会根据不同的openwin绑定不同的事件函数。
                  oriBigData[examId].chosen = [];//清空数据
                  oriBigData[examId].wait =[];//清空数据
                 $(".scroll2 li").each(function(item,key){//操作考官数据
