@@ -64,14 +64,13 @@ input{
             box-sizing: border-box;
             float: left;
             width:26%;
-            line-height:36px;
+            line-height:35px;
             padding:0 12px 0 0;
             .tr();
             &.must:before{
                 content: "*";
                 display:inline-block;
                 margin:0px 5px 0 0;
-                vertical-align:middle;
                 color:#ff5200;
             }
         }
@@ -79,7 +78,8 @@ input{
             float: right;
             width:74%;
             input{
-                padding:8px 12px;
+                line-height:33px;
+                padding:0 12px;
                 border:1px solid @fc-b;
                 border-radius:3px;
                 font-size:@fs16;

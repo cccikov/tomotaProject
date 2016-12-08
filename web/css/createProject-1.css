@@ -79,7 +79,7 @@ input {
   box-sizing: border-box;
   float: left;
   width: 26%;
-  line-height: 36px;
+  line-height: 35px;
   padding: 0 12px 0 0;
   text-align: right;
 }
@@ -87,7 +87,6 @@ input {
   content: "*";
   display: inline-block;
   margin: 0px 5px 0 0;
-  vertical-align: middle;
   color: #ff5200;
 }
 .cp1-wrap .cp1-main .right {
@@ -95,7 +94,8 @@ input {
   width: 74%;
 }
 .cp1-wrap .cp1-main .right input {
-  padding: 8px 12px;
+  line-height: 33px;
+  padding: 0 12px;
   border: 1px solid #888888;
   border-radius: 3px;
   font-size: 16px;
