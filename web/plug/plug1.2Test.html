@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试插件</title>
+	<!-- 实际版本已经变成1.2，已经将1.1里面的bug修复了 -->
+	<link rel="stylesheet" type="text/css" href="cccScrollBar-1.1.css">
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="cccScrollBar-1.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#wrap").cccScrollBar();
+		});
+	</script>
+</head>
+<body>
+	<style type="text/css">
+		#wrap{
+			/* 必定要有的三个样式 定位,设定高度,overflow:hidden*/
+			position: relative;
+			height:300px;
+			overflow: hidden;
+		}
+	</style>
+	<div id="wrap">
+		<!-- 固定名字 cccScrollContent -->
+		<div class="cccScrollContent">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+	</div>
+</body>
+</html>
