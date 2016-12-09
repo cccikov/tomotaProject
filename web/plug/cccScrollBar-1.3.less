@@ -3,7 +3,7 @@
     z-index: 1;
     padding-right:10px !important;
 }
-.sideBar {
+.slideBarY {
     display: none;
     position: absolute;
     right: 2px;
@@ -15,7 +15,10 @@
     background: #fff;
     opacity: 0.8;
     cursor: pointer;
-    .slider {
+    &.active{
+        display: block;
+    }
+    .sliderY {
         position: absolute;
         top: 0;
         left: 0;
@@ -24,13 +27,10 @@
         border-radius: 4px;
         background: #0082CA;
     }
-    .slider.animate {
+    .sliderY.animate {
         transition: transform 0.3s;
     }
 }
 .inBox.animate {
     transition: transform 0.3s;
-}
-.sideBar.active {
-    display: block;
 }
