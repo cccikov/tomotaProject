@@ -9,7 +9,7 @@ ScrollBar.prototype = {
 		/*获取对象*/
 		var that = ele.css({"position":"relative","overflow":"hidden"});
 		var scrollWrap = that;//包含着滚动条的块
-		var scrollCtx = that.find(".cccScrollContent").eq(0);//滚动主体
+		var scrollCtx = that.find(".scrollctx").eq(0);//滚动主体
 		if(scrollWrap.find(".slideBarY").size()>0){
 			var slideBarY = scrollWrap.find(".slideBarY");//为了重新建滚动，比如内容改变的时候
 		}else{

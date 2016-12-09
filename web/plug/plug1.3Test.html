@@ -9,13 +9,14 @@
 	<script type="text/javascript">
 		var a;
 		$(function(){
-		 	a = new cccScrollBar($("#wrap"));
+		 	a = new ScrollBar($("#wrap"));
 		});
 	</script>
 </head>
 <body>
 	<style type="text/css">
 		#wrap{
+			padding:100px 0;
 			width: 200px;
 			border:1px solid #ccc;
 			/* 必定要有的三个样式 定位,设定高度,overflow:hidden*/
@@ -24,7 +25,7 @@
 	</style>
 	<div id="wrap">
 		<!-- 固定名字 cccScrollContent -->
-		<div class="cccScrollContent">
+		<div class="scrollctx">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
