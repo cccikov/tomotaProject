@@ -46,7 +46,7 @@ ScrollBar.prototype = {
             var that = $(this);
 
             //滑块偏移
-            var sliderTop = e.clientY - that.offset().top - slideBarY.height() / 2;
+            var sliderTop = e.clientY - that.offset().top - sliderY.height() / 2;
             self.posiMove(sliderTop, true);
         });
 
