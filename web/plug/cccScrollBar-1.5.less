@@ -1,0 +1,84 @@
+.scrollCtx {
+    position: relative;
+    z-index: 1;
+    padding-right:10px !important;
+    padding-bottom: 10px !important;//为了横向滚动条，其实也是可以不加的
+    &.animate {
+        transition: transform 0.3s;
+    }
+}
+.slideBarY {
+    //不可改动
+    display: none;
+    position: absolute;
+    height: 100%;
+    //位置样式(可以改,但是不能缺)
+    right: 0px;
+    top: 0;
+    z-index: 10;
+    width: 10px;
+    //视觉样式(可修改)
+    // border-radius: 4px;
+    background: rgba(255,255,255,0);
+    cursor: pointer;
+    transition:background 0.3s;
+    &.active{
+        display: block;
+    }
+    &:hover{
+        background: rgba(255,255,255,1);
+    }
+    .sliderY {
+        //不可改动
+        position: absolute;
+        //位置样式(可以改,但是不能缺)
+        top: 0;
+        left: 2px;
+        width: 6px;
+        // height: 112px;为了调试时用的
+        //视觉样式(可修改)
+        border-radius: 4px;
+        background: #0082CA;
+        &.animate {
+            transition: transform 0.3s;
+        }
+    }
+}
+
+.slideBarX{
+    //不可改动
+    display: none;
+    position: absolute;
+    width: 100%;
+    //位置样式(可以改,但是不能缺)
+    right: 0px;
+    bottom: 0;
+    z-index: 9;
+    height: 10px;
+    //视觉样式(可修改)
+    // border-radius: 4px;
+    background: rgba(255,255,255,0);
+    cursor: pointer;
+    transition:background 0.3s;
+    &.active{
+        display: block;
+    }
+    &:hover{
+        background: rgba(255,255,255,1);
+    }
+    .sliderX {
+        //不可改动
+        position: absolute;
+        //位置样式(可以改,但是不能缺)
+        top: 2px;
+        left: 0;
+        height: 6px;
+        // width: 22px;//为了调试时用的
+        //视觉样式(可修改)
+        border-radius: 4px;
+        background: #0082CA;
+        &.animate {
+            transition: transform 0.3s;
+        }
+    }
+}

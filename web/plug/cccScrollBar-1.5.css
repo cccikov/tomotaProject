@@ -1,0 +1,67 @@
+.scrollCtx {
+  position: relative;
+  z-index: 1;
+  padding-right: 10px !important;
+  padding-bottom: 10px !important;
+}
+.scrollCtx.animate {
+  transition: transform 0.3s;
+}
+.slideBarY {
+  display: none;
+  position: absolute;
+  height: 100%;
+  right: 0px;
+  top: 0;
+  z-index: 10;
+  width: 10px;
+  background: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.slideBarY.active {
+  display: block;
+}
+.slideBarY:hover {
+  background: #ffffff;
+}
+.slideBarY .sliderY {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 6px;
+  border-radius: 4px;
+  background: #0082CA;
+}
+.slideBarY .sliderY.animate {
+  transition: transform 0.3s;
+}
+.slideBarX {
+  display: none;
+  position: absolute;
+  width: 100%;
+  right: 0px;
+  bottom: 0;
+  z-index: 9;
+  height: 10px;
+  background: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.slideBarX.active {
+  display: block;
+}
+.slideBarX:hover {
+  background: #ffffff;
+}
+.slideBarX .sliderX {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 6px;
+  border-radius: 4px;
+  background: #0082CA;
+}
+.slideBarX .sliderX.animate {
+  transition: transform 0.3s;
+}

@@ -30,8 +30,8 @@ $(function(){
         createWaitAdmin(dataWait);
         createChosenAdmin(dataChosen);
 
-        new ScrollBar($(".scroll1"));
-        new ScrollBar($(".scroll2"));
+        new AutoScroll($(".scroll1"),true);
+        new AutoScroll($(".scroll2"),true);
     }
     function closeWin(){
         $(".mask").remove();
@@ -73,13 +73,13 @@ $(function(){
         // 左右移动
         $(".toright").off("click").on("click",function(){//因为不一定是会按确定，所以这些操作不改变考官数据
             $(".scroll1 li.active").appendTo(".scroll2 ul").removeClass("active");
-            new ScrollBar($(".scroll1"));
-            new ScrollBar($(".scroll2"));
+            new AutoScroll($(".scroll1"),true);
+            new AutoScroll($(".scroll2"),true);
         });
         $(".toleft").off("click").on("click",function(){
             $(".scroll2 li.active").appendTo(".scroll1 ul").removeClass("active");
-            new ScrollBar($(".scroll1"));
-            new ScrollBar($(".scroll2"));
+            new AutoScroll($(".scroll1"),true);
+            new AutoScroll($(".scroll2"),true);
         });
         /*弹窗操作内 end*/
 
