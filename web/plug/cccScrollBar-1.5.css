@@ -1,6 +1,12 @@
 .scrollCtx {
   position: relative;
   z-index: 1;
+  display: inline-block;
+  /*为了横向滚动条时，被里面的元素撑大，*/
+  min-width: 100%;
+  /*由于是inline-block，所以为了避免不够长的时候出现的差错*/
+  box-shadow: border-box;
+  /*min-width: 100%不够长度的时候100%,但是有下面padding啊*/
   padding-right: 10px !important;
   padding-bottom: 10px !important;
 }
