@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>好难的导航</title>
+    <link rel="stylesheet" type="text/css" href="css/hardNav.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("a").on("click",function(){
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="demo1">
+        <div class="paper-nav">
+            <a href="###">
+                <strong>1</strong>
+                <span>设置试卷信息</span>
+            </a>
+            <a href="###">
+                <strong>2</strong>
+                <span>设置题目</span>
+            </a>
+            <a href="###">
+                <strong>3</strong>
+                <span>设置分数</span>
+            </a>
+            <a href="###">
+                <strong>4</strong>
+                <span>设置结束语</span>
+            </a>
+            <a href="###">
+                <strong>5</strong>
+                <span>完成</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

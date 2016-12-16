@@ -1,0 +1,63 @@
+@import url(common.less);
+[id*='demo']{
+    padding:15px;
+}
+.demo1(){
+    .paper-nav{
+        border-left:1px solid #dadada;
+        border-right:1px solid #dadada;
+        border-radius: 5px;
+        .clearfix();
+        a{
+            position:relative;
+            float: left;
+            width: 20%;
+            height:51px;
+            line-height: 51px;
+            border-top: 1px solid #dadada;
+            border-bottom: 1px solid #dadada;
+            background: url(../img/nav.png) center left repeat-x;
+            color:#0082ca;
+            text-indent:3em;
+            &:after{
+                position:absolute;
+                top:0px;
+                right:-28px;
+                z-index: 10;
+                content: "";
+                width:29px;
+                height:51px;
+                background: url(../img/normal4.png) right no-repeat;
+            }
+            &:last-of-type:after{
+                display: none;
+            }
+            strong{
+                font-size: 24px;
+                vertical-align:middle;
+            }
+            span{
+                position:relative;
+                top:0.5px;
+                left:5px;
+                font-size:15px;
+                vertical-align:middle;
+            }
+        }
+        a.active{
+            border-top: 1px solid #0082ca;
+            border-bottom: 1px solid #0082ca;
+            background: #0082ca;
+            color:#fff;
+            &:after{
+                background: url(../img/active4.png) right no-repeat;
+            }
+            &:last-of-type:after{
+                display: none;
+            }
+        }
+    }
+}
+#demo1{
+    .demo1();
+}
