@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间选择限制</title>
+    <script type="text/javascript" src='js/jquery.min.js'></script>
+    <script type="text/javascript" src='js/timeLimit.js'></script>
+    <style type="text/css">
+        input{
+            padding:5px 12px;
+            border:1px solid #ccc;
+            border-radius: 5px;
+        }
+        input.wrong{
+            border:1px solid #f00;
+        }
+        input:focus{
+            outline: none;
+        }
+        .box{
+            display: none;
+            margin:15px 0 0;
+        }
+        .box.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-time">
+        <h5>项目时间(假设考试时间范围为: 2016/12/23 09:00:00 -- 2016/12/30 18:00:00 )</h5>
+        <p>
+            <label>
+                <input type="radio" name="project-status" value="new" checked=""> 新建
+            </label>
+            <label>
+                <input type="radio" name="project-status" value="edit"> 修改
+            </label>
+        </p>
+        <p>
+            <!-- project-time-begin -->
+            <input id="pb" type="datetime-local" value="2016-11-01T00:00">
+            <span> -- </span>
+            <!-- project-time-end -->
+            <input id="pe" type="datetime-local"  value="2016-12-31T00:00">
+        </p>
+    </div>
+
+    <div class="exam-time">
+        <h5>考试时间</h5>
+        <p>
+            <label>
+                <input type="radio" name="exam-status" value="new" checked=""> 新建
+            </label>
+            <label>
+                <input type="radio" name="exam-status" value="edit"> 修改
+            </label>
+        </p>
+        <p>
+            <!-- exam-time-begin -->
+            <input id="eb" type="datetime-local">
+            <span> -- </span>
+            <!-- exam-time-end -->
+            <input id="ee" type="datetime-local">
+        </p>
+        <div class="tab-btn">
+            <a data-exam-type="1" href="javascript:void(0)">统一时点交卷</a>
+            <a data-exam-type="2" href="javascript:void(0)">按考试时长交卷</a>
+        </div>
+        <div class="tab-box">
+            <div class="box active">
+                开考<input id="delay" type="number">分钟后不允许考试
+            </div>
+            <div class="box">
+                考试时长<input id="duration" type="number">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
