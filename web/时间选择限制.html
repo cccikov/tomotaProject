@@ -58,20 +58,20 @@
         </p>
         <p>
             <!-- exam-time-begin -->
-            <input id="eb" type="datetime-local">
+            <input id="eb" type="datetime-local" value="2016-12-30T22:00">
             <span> -- </span>
             <!-- exam-time-end -->
-            <input id="ee" type="datetime-local">
+            <input id="ee" type="datetime-local" value="2016-12-30T23:00">
         </p>
         <div class="tab-btn">
             <a data-exam-type="1" href="javascript:void(0)">统一时点交卷</a>
             <a data-exam-type="2" href="javascript:void(0)">按考试时长交卷</a>
         </div>
         <div class="tab-box">
-            <div class="box active">
+            <div class="box active" data-val="delay">
                 开考<input id="delay" type="number">分钟后不允许考试
             </div>
-            <div class="box">
+            <div class="box" data-val="duration">
                 考试时长<input id="duration" type="number">
             </div>
         </div>
