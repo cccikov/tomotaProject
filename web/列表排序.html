@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>列表排序</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul,
+    li {
+        list-style: none;
+    }
+
+    ul {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        box-sizing: border-box;
+        color: #757575;
+    }
+
+    li {
+        display: table-row;
+    }
+
+    li.title {
+        font-weight: 700;
+        background: #0082ca;
+        color: #fff;
+    }
+
+    span,
+    a {
+        display: table-cell;
+        width: 33.3333333%;
+        padding: 5px 12px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:after {
+        content: ">";
+        position: relative;
+        left: 10px;
+        display: inline-block;
+        margin: -3px 0 0;
+        vertical-align: middle;
+        font-size: 12px;
+        transition: transform 0.3s, opacity 0.3s;
+        opacity: 0;
+        transform: scale(0.9) rotate(0deg);
+    }
+
+    a.down:after {
+        opacity: 1;
+        transform: scale(0.9) rotate(90deg);
+    }
+
+    a.up:after {
+        opacity: 1;
+        transform: scale(0.9) rotate(-90deg);
+    }
+    </style>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    function ran(max, min) {
+        return parseInt(Math.random() * (max - min + 1) + min)
+    }
+
+    function formatDate(d) {
+        var now = new Date(d);
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        month < 10 ? month = "0" + month : month = month;
+        var day = now.getDate();
+        day < 10 ? day = "0" + day : day = day;
+        var hour = now.getHours();
+        hour < 10 ? hour = "0" + hour : hour = hour;
+        var minute = now.getMinutes();
+        minute < 10 ? minute = "0" + minute : minute = minute;
+        var second = now.getSeconds();
+        second < 10 ? second = "0" + second : second = second;
+        return year + "-" + month + "-" + day
+    }
+
+    // if(!Array.prototype.up){
+    //     Array.prototype.up = function (){
+    //         this.sort(function(a,b){return a-b;});
+    //         return this;
+    //     }
+    // }
+    // if(!Array.prototype.down){
+    //     Array.prototype.down = function (){
+    //         this.sort(function(a,b){return b-a;});
+    //         return this;
+    //     }
+    // }
+
+    function down(arr) {
+        arr.sort(function(a, b) {
+            return a - b;
+        });
+        return arr;
+    }
+
+    function up(arr) {
+        arr.sort(function(a, b) {
+            return b - a;
+        });
+        return arr;
+    }
+
+    var str = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis dolorem culpa rerum praesentium, unde modi asperiores velit cumque officia explicabo."
+    str = str.replace(/,/g, "").replace(/\./g, "");
+    var nameArr = str.split(" ");
+
+    var data = [];
+    for (var i = 0; i < 20; i++) {
+        var obj = {};
+        obj.name = nameArr[i]
+        obj.time = (new Date()).getTime() - ran(1, 700) * 86400 * 1000;
+        obj.mark = ran(50, 95);
+        data.push(obj);
+    }
+
+
+
+    /*真正操作,上面都是生成数据*/
+    $(function() {
+        for (var i in data) {
+            $('<li class="item"><span data-name="' + data[i].name + '">' + data[i].name + '</span><span data-time="' + data[i].time + '">' + formatDate(data[i].time) + '</span><span data-mark="' + data[i].mark + '">' + data[i].mark + '</span></li>').appendTo('ul');
+        }
+
+        $(".name,.time,.mark").on("click", function() {
+            var that = $(this);
+            var type = that.attr("data-type");
+            var direction;//方向
+            if (!that.is(".up")) {
+                that.addClass("up").siblings().removeClass("up down");
+                direction = "up";
+            } else {
+                that.removeClass("up").addClass("down").siblings().removeClass("up down");
+                direction = "down";
+            }
+            var arr = [];
+            for (var i in data) {
+                arr[i] = data[i][type];
+            };
+            if(direction == "up"){
+                up(arr);
+            }else{
+                down(arr);
+            }
+            for (var j in arr) {
+                $("[data-"+type+"="+arr[j]+"]").parent().appendTo('ul');
+            };
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li class="title">
+            <a class="name" data-type="name" href="javascript:void(0)">名字</a>
+            <a class="time" data-type="time" href="javascript:void(0)">时间</a>
+            <a class="mark" data-type="mark" href="javascript:void(0)">成绩</a>
+        </li>
+    </ul>
+</body>
+
+</html>
