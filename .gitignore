@@ -1,2 +1,5 @@
 resource/
 *.project
+web/css/test.css
+web/css/test.less
+web/test.html
