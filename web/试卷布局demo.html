@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>试卷布局demo</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        #wrap{
+            position: relative;
+            min-width: 1280px;
+        }
+        .left{
+            position:absolute;
+            left: 0;
+            top:0;
+            width: 150px;
+            height:800px;
+            background: #e00;
+        }
+        .right{
+            position: relative;
+            margin-left:150px;
+            /*background: #f6f8fd;*/
+        }
+        .right-top{
+            height:60px;
+            margin-right:120px;
+            background: #0f0;
+        }
+        .item{
+            /*清浮动*/
+            overflow: hidden;
+
+            margin : 5px 0;
+        }
+        .item-right{
+            float: right;
+            width: 120px;
+            background: #00f;
+        }
+        .item-left{
+            overflow: hidden;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="left">
+            left:150px
+        </div>
+        <div class="right">
+            <div class="right-top">
+
+            </div>
+            <div class="right-main">
+                <div class="item">
+                    <div class="item-right">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <div class="item-left">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda dicta, recusandae, ut, neque rerum commodi ad facere excepturi sequi iure mollitia labore esse, laudantium. Facilis dolores cupiditate, necessitatibus enim impedit. Quas excepturi quod iusto, ducimus doloribus molestias blanditiis dolorum necessitatibus sunt a fugit in delectus saepe repudiandae esse totam, molestiae illo temporibus minus magni, labore odit recusandae reprehenderit reiciendis similique. Perferendis ab aut ad unde nam soluta beatae explicabo sunt cumque eligendi blanditiis esse totam amet est excepturi magnam, consequatur repudiandae, distinctio nihil provident placeat odit minima iusto? Dicta assumenda necessitatibus sequi, quam officiis animi optio nulla magni architecto.
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-right">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </div>
+                    <div class="item-left">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque voluptates nam fuga incidunt voluptatibus, at, iure tempore veniam laborum nesciunt consequatur provident et aliquam aliquid deleniti sit eaque architecto nulla. ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda dicta, recusandae, ut, neque rerum commodi ad facere excepturi sequi iure mollitia labore esse, laudantium. Facilis dolores cupiditate, necessitatibus enim impedit. Quas excepturi quod iusto, ducimus doloribus molestias blanditiis dolorum necessitatibus sunt a fugit in delectus saepe repudiandae esse totam, molestiae illo temporibus minus magni, labore odit recusandae reprehenderit reiciendis similique. Perferendis ab aut ad unde nam soluta beatae explicabo sunt cumque eligendi blanditiis esse totam amet est excepturi magnam, consequatur repudiandae, distinctio nihil provident placeat odit minima iusto? Dicta assumenda necessitatibus sequi, quam officiis animi optio nulla magni architecto.
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-right">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <div class="item-left">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda dicta, recusandae, ut, neque rerum commodi ad facere excepturi sequi iure mollitia labore esse, laudantium. Facilis dolores cupiditate, necessitatibus enim impedit. Quas excepturi quod iusto, ducimus doloribus molestias blanditiis dolorum necessitatibus sunt a fugit in delectus saepe repudiandae esse totam, molestiae illo temporibus minus magni, labore odit recusandae reprehenderit reiciendis similique. Perferendis ab aut ad unde nam soluta beatae explicabo sunt cumque eligendi blanditiis esse totam amet est excepturi magnam, consequatur repudiandae, distinctio nihil provident placeat odit minima iusto? Dicta assumenda necessitatibus sequi, quam officiis animi optio nulla magni architecto.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
