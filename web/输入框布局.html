@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			padding:15px;
+			margin:0;
+		}
+		hr{
+			margin:30px 0;
+		}
+		textarea{
+			box-sizing: border-box;
+			display: block;
+			width: 100%;
+			margin:0;
+			padding:0;
+			resize: none;
+		}
+		i{
+			position: absolute;
+			right:-25px;
+			top:5px;
+			width: 20px;
+			height: 20px;
+			background: #f00;
+		}
+
+		.item{
+			position: relative;
+			padding:0 0 0 50px;
+			margin:15px 30px 0 0;
+			background: url(img/blue.png) left top repeat-y;
+		}
+
+		.item:nth-of-type(1):before{
+			content: "1";
+		}
+		.item:nth-of-type(2):before{
+			content: "2";
+		}
+		.item:nth-of-type(3):before{
+			content: "3";
+		}
+		.item:nth-of-type(4):before{
+			content: "4";
+		}
+		.item:nth-of-type(5):before{
+			content: "5";
+		}
+		.item:nth-of-type(6):before{
+			content: "6";
+		}
+		.item:before{
+			position: absolute;
+			top:50%;
+			left:15px;
+			width: 20px;
+			line-height: 20px;
+			margin:-10px 0 0 0;
+			text-align: center;
+		}
+		.item{
+			position: relative;
+			padding:0 0 0 50px;
+			margin:15px 30px 0 0;
+			background: url(img/blue.png) left top repeat-y;
+		}
+
+
+
+		#demo2 .ctx{
+			position: relative;
+		}
+		#demo2 textarea{
+			height:100%;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo1">
+		<div class="item">
+			<textarea></textarea>
+			<i></i>
+		</div>
+		<div class="item">
+			<textarea style="height:100px;"></textarea>
+			<i></i>
+		</div>
+		<div class="item">
+			<textarea style="height:200px; width: 50%"></textarea>
+			<i></i>
+		</div>
+		<div class="item">
+			<textarea style="height:150px; width: 70%"></textarea>
+			<i></i>
+		</div>
+	</div>
+
+	<hr>
+
+	<div id="demo2">
+		<div class="item">
+			<div class="ctx" style="width: 50%">
+				<textarea></textarea>
+				<i></i>
+			</div>
+		</div>
+		<div class="item">
+			<div class="ctx" style="height:150px;width: 75%">
+				<textarea></textarea>
+				<i></i>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
