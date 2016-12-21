@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  background: #fff;
+  color: #212121;
+  font: 12px/1.5 'microsoft yahei', Verdana, Arial, 'simsun';
+}
+a {
+  text-decoration: none;
+  color: #212121;
+}
+a.important-link {
+  color: #0082ca;
+}
+.mouse-hover:hover {
+  text-decoration: underline;
+  color: #0082ca;
+}
+html,
+body {
+  background: #f5f5f5;
+}
+body {
+  min-width: 1024px;
+}
+a {
+  color: inherit;
+}
+.header {
+  min-height: 60px;
+  background: #3d7dca;
+  color: #fff;
+}
+.header .header-content {
+  max-width: 1007px;
+  margin: 0 auto;
+}
+.header .header-content:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.header .header-content .header-left {
+  float: left;
+  position: relative;
+  padding: 0 0 0 195px;
+}
+.header .header-content .header-left img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header .header-content .header-left h1 {
+  display: inline-block;
+  line-height: 60px;
+  font-size: 18px;
+}
+.header .header-content .header-right {
+  float: right;
+  line-height: 60px;
+}
+.header .header-content .header-right span {
+  font-size: 18px;
+}
+.header .header-content .header-right a {
+  font-size: 18px;
+  margin: 0 0 0 30px;
+}
+.main {
+  max-width: 983px;
+  padding: 30px 12px;
+  margin: 0 auto;
+}
+.main .tips em {
+  margin: 0 10px;
+  font-style: normal;
+  color: #ff0000;
+}
+.main .tips strong {
+  margin: 0 10px;
+  font-weight: 300;
+  color: #0082ca;
+}
+.footer {
+  line-height: 75px;
+  background: #dfe2e7;
+  color: #9e9e9e;
+  font-size: 12px;
+  text-align: center;
+}
