@@ -73,8 +73,11 @@ a {
 }
 .main {
   max-width: 983px;
-  padding: 30px 12px;
   margin: 0 auto;
+  padding: 0 0 15px;
+}
+.main .tips {
+  padding: 30px 12px;
 }
 .main .tips em {
   margin: 0 10px;
@@ -85,6 +88,53 @@ a {
   margin: 0 10px;
   font-weight: 300;
   color: #0082ca;
+}
+.main .ctx {
+  position: relative;
+  padding: 0 12px 15px;
+  border-radius: 5px;
+  background: #fff;
+}
+.main .ctx:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 55px;
+  background: #27a4f2;
+}
+.main .ctx .list {
+  position: relative;
+  z-index: 10;
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+.main .ctx .list .item {
+  display: table-row;
+  border-bottom: 1px dashed #ccc;
+  text-align: center;
+}
+.main .ctx .list .item.title {
+  height: 55px;
+  border: none;
+  background: #27a4f2;
+  color: #fff;
+}
+.main .ctx .list .item:last-of-type {
+  border-bottom: 1px solid #ccc;
+}
+.main .ctx .list .item span {
+  display: table-cell;
+  padding: 12px 0;
+  vertical-align: middle;
+}
+.main .ctx .list .item span a {
+  text-decoration: underline;
 }
 .footer {
   line-height: 75px;
