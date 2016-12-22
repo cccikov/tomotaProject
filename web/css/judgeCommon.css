@@ -70,7 +70,14 @@ body {
   margin: 0 auto;
 }
 .main .tips {
-  padding: 30px 12px;
+  line-height: 30px;
+  padding: 24px 12px;
+  font-size: 14px;
+}
+.main .tips:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 .main .tips em {
   margin: 0 10px;
@@ -81,6 +88,15 @@ body {
   margin: 0 10px;
   font-weight: 300;
   color: #0082ca;
+}
+.main .tips a {
+  float: right;
+  width: 100px;
+  border-radius: 5px;
+  margin: 0 -12px 0 0;
+  background: #27a4f2;
+  color: #fff;
+  text-align: center;
 }
 .footer {
   line-height: 75px;

@@ -43,7 +43,10 @@ body{
     width: 1000px;
     margin: 0 auto;
     .tips{
-        padding : 30px 12px;
+        .clearfix();
+        line-height: 30px;
+        padding : 24px 12px;
+        font-size:@fs14;
         em{
             margin:0 10px;
             font-style: normal;
@@ -53,6 +56,15 @@ body{
             margin:0 10px;
             font-weight: 300;
             color:#0082ca;
+        }
+        a{
+            float: right;
+            width: 100px;
+            border-radius: 5px;
+            margin: 0 -12px 0 0;
+            background: #27a4f2;
+            color:#fff;
+            text-align: center;
         }
     }
 }
