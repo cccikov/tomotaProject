@@ -1,0 +1,66 @@
+@import url(judgeCommon.css);
+@import url(common.less);
+a{
+    color:inherit;
+}
+html,body{
+    background: #f5f5f5;
+}
+.main{
+    //
+    width: 80%;
+
+    //
+    padding: 0 0 15px;
+    // 内容
+    .ctx{
+        border-radius: 5px;
+        // 内容 顶部 蓝色部分
+        .ctx-top{
+            min-height:54px;
+            line-height: 54px;
+            padding : 0 38px;
+            background: #27a4f2;
+            color:#fff;
+            font-size:@fs16;
+            .clearfix();
+            h5{
+                float: left;
+                margin: 0 38px 0 0;
+                font:inherit;
+            }
+            .top-select-warp{
+                float: left;
+                margin: 0 30px 0 0;
+                div{
+                    display: inline-block;
+                    width:163px;
+                    height: 30px;
+                    margin:-3px 0 0;
+                    background: #fff;
+                    vertical-align: middle;
+                }
+            }
+            a{
+                float: right;
+                font-size:14px;
+            }
+        }
+
+        // 内容 中部 答案部分
+        .ctx-middle{
+            .examineeNum,.type,.question{
+
+            }
+            .answer{
+                .answer-right{
+
+                }
+                .answer-left{
+
+                }
+            }
+        }
+
+    }
+}
