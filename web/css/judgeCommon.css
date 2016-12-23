@@ -57,13 +57,12 @@ body {
   float: right;
   line-height: 60px;
 }
-.header .header-content .header-right span {
-  font-size: 18px;
-  margin: 0 65px 0 0;
-}
 .header .header-content .header-right a {
   font-size: 18px;
   margin: 0 35px 0 0;
+}
+.header .header-content .header-right a:first-of-type {
+  margin: 0 65px 0 0;
 }
 .main {
   width: 1000px;
