@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>分数结束语-区间判断</title>
+    <style type="text/css">
+    input {
+        padding: 5px 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    input.error {
+        border-color: red;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    button.error {
+        cursor: default;
+        pointer-events: none;
+    }
+    </style>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    var ccc = {};
+    // 设置localStorage
+    ccc.setStorage = function(key, value) {
+        if (arguments.length === 2) {
+            var v = value;
+            if (typeof v == 'object') {
+                v = JSON.stringify(v);
+                v = 'obj-' + v;
+            } else {
+                v = 'str-' + v;
+            }
+            var ls = window.localStorage;
+            if (ls) {
+                ls.setItem(key, v);
+                return v;
+            }
+        }
+    };
+    // 访问localStorage
+    ccc.getStorage = function(key) {
+        var ls = window.localStorage;
+        if (ls) {
+            var v = ls.getItem(key);
+            if (!v) {
+                return;
+            }
+            if (v.indexOf('obj-') === 0) {
+                v = v.slice(4);
+                return JSON.parse(v);
+            } else if (v.indexOf('str-') === 0) {
+                return v.slice(4);
+            }
+        }
+    };
+    // 删除localStorage
+    ccc.rmStorage = function(key) {
+        var ls = window.localStorage;
+        if (ls && key) {
+            ls.removeItem(key);
+        }
+    };
+    // 清空localStorage
+    ccc.clearStorage = function() {
+        var ls = window.localStorage;
+        if (ls) {
+            ls.clear();
+        }
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function Interval(min,max){//区间构造函数
+        this.min = min;
+        this.max = max;
+    }
+
+    function allTrue() { //判断值是否在区间里面
+        var arguLen = arguments.length;
+        var data = arguments[0];
+        if (arguLen == 2) {
+            var val = arguments[1];
+            for (var i in data) {
+                if (val >= data[i].min && val <= data[i].max) {
+                    return false;
+                }
+            }
+            return true;
+        } else if (arguLen == 3) {
+            var min = arguments[1];
+            var max = arguments[2];
+            if (max > min) {
+                for (var i in data) { //判断是否在其他区间里面
+                    if (!((min > data[i].max && max > data[i].max) || (max < data[i].min && min < data[i].min))) {
+                        return false; //在区间中
+                    }
+                }
+            } else { //min值大于max值
+                return false;
+            }
+            return true;
+        }
+    }
+    $(function() {
+
+        var data = ccc.getStorage("data") || [];
+        var theMaxNumber = 9999;
+        // 将数据打印出来
+        for (var i in data) {
+            $("<p>" + data[i].min + "----" + data[i].max + "</p>").appendTo("body");
+        }
+
+        $("input").on("input", function() {
+            var that = $(this);
+            var val = that.val();
+            var siblingVal = that.siblings('input').val();
+
+            if (val == "") { //这个input无值时
+                $('button').addClass("error");
+                that.removeClass('error');
+                return true;
+            } else { //有值的时候
+                if (siblingVal == "" && !isNaN(val)) { //只有一个值得时候
+                    val = Number(val);
+                    if (val >= 0 && val <= theMaxNumber && allTrue(data, val)) {
+                        that.removeClass("error");
+                        return true;
+                    }
+                } else if (siblingVal != "" && !isNaN(val) && !isNaN(siblingVal)) { //两个值得时候
+                    // 根据className去赋min,max值
+                    if (that.hasClass('begin')) {
+                        var min = Number(val);
+                        var max = Number(siblingVal);
+                    } else {
+                        var min = Number(siblingVal);
+                        var max = Number(val);
+                    }
+                    if (max >= 0 && min >= 0 && max <= theMaxNumber && min < max && allTrue(data, min, max)) {
+                        that.add('button').removeClass("error");
+                        return true;
+                    }
+                }
+            }
+            //如果上面的条件都不符合,就是false,就是错误
+            that.add('button').addClass("error");
+            // return false;
+        });
+
+
+        $("button").on("click", function() {
+            var min = Number($('.begin').val());
+            var max = Number($('.end').val());
+            data.push(new Interval(min,max));
+            ccc.setStorage('data',data);
+            $("<p>" + min + "----" + max + "</p>").appendTo("body");
+            $("input").val("");
+        });
+
+    });
+    </script>
+</head>
+
+<body>
+    假设最大值为9999
+    <br>
+    <input type="text" class="begin">--
+    <input type="text" class="end">
+    <button class="error">添加</button>
+</body>
+
+</html>
