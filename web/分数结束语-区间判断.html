@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>分数结束语-区间判断</title>
     <style type="text/css">
     input {
@@ -165,7 +166,7 @@
                         var max = Number(val);
                     }
                     if (max >= 0 && min >= 0 && max <= theMaxNumber && min < max && allTrue(data, min, max)) {
-                        that.add('button').removeClass("error");
+                        $("input").add('button').removeClass("error");//因为上面的判断是两个都没有错的时候才有的,所以可以同时去除
                         return true;
                     }
                 }
