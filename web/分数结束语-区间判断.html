@@ -81,14 +81,6 @@
 
 
 
-
-
-
-
-
-
-
-
     function isNum(str){
         var rep = /^\d+(\.\d){0,1}$/;
         return rep.test(Number(str));
@@ -103,7 +95,7 @@
     function allTrue() { //判断值是否在区间里面
         var arguLen = arguments.length;
         var data = arguments[0];
-        if (arguLen == 2) {
+        if (arguLen == 2) {//两个参数的时候,就是传入data,val的时候,就是两个input只输入了一个;就判断这个val是否在任意一个区间里面 , 如果是返回false
             var val = arguments[1];
             for (var i in data) {
                 if (val >= data[i].min && val <= data[i].max) {
@@ -111,12 +103,12 @@
                 }
             }
             return true;
-        } else if (arguLen == 3) {
+        } else if (arguLen == 3) {//三个参数的时候,就是传入data,min,max,两个input都有值,而已已经判断哪个是max,哪个是min;只要符合min大于区间的最大值,或者max小于区间的最小值就为正确,如不符合就返回false
             var min = arguments[1];
             var max = arguments[2];
             if (max > min) {
                 for (var i in data) { //判断是否在其他区间里面
-                    if (!((min > data[i].max && max > data[i].max) || (max < data[i].min && min < data[i].min))) {
+                    if (!((min > data[i].max) || (max < data[i].min))) {
                         return false; //在区间中
                     }
                 }
@@ -157,7 +149,6 @@
                 that.removeClass('error');
                 return true;
             } else { //有值的时候
-                console.log(val,isNum(val));
                 if (siblingVal == "" && isNum(val)) { //只有一个值得时候
                     val = Number(val);
                     if (val >= 0 && val <= theMaxNumber && allTrue(data, val)) {
@@ -213,8 +204,7 @@
 </head>
 
 <body>
-    假设最大值为100
-    <br>
+    <h4>假设最大值为100</h4>
     <input type="text" class="begin">--
     <input type="text" class="end">
     <button class="add error">添加</button>
