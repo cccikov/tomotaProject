@@ -89,7 +89,10 @@
 
 
 
-
+    function isNum(str){
+        var rep = /^\d+(\.\d){0,1}$/;
+        return rep.test(Number(str));
+    }
 
 
     function Interval(min,max){//区间构造函数
@@ -123,10 +126,22 @@
             return true;
         }
     }
+
+    function isFull(data,max){// 区间是否全部填满 全部乘以10 是为了避免浮点数
+        var sum = 0;
+        for(var i in data){
+            sum += (data[i].max*10-data[i].min*10);
+        }
+        sum += (data.length-1)*0.1*10;
+        // return sum/10;
+        sum = sum/10;
+        return sum == max;
+    }
+
     $(function() {
 
         var data = ccc.getStorage("data") || [];
-        var theMaxNumber = 9999;
+        var theMaxNumber = 100;
         // 将数据打印出来
         for (var i in data) {
             $("<p>" + data[i].min + "----" + data[i].max + "</p>").appendTo("body");
@@ -142,13 +157,14 @@
                 that.removeClass('error');
                 return true;
             } else { //有值的时候
-                if (siblingVal == "" && !isNaN(val)) { //只有一个值得时候
+                console.log(val,isNum(val));
+                if (siblingVal == "" && isNum(val)) { //只有一个值得时候
                     val = Number(val);
                     if (val >= 0 && val <= theMaxNumber && allTrue(data, val)) {
                         that.removeClass("error");
                         return true;
                     }
-                } else if (siblingVal != "" && !isNaN(val) && !isNaN(siblingVal)) { //两个值得时候
+                } else if (siblingVal != "" && isNum(val) && isNum(siblingVal)) { //两个值得时候
                     // 根据className去赋min,max值
                     if (that.hasClass('begin')) {
                         var min = Number(val);
@@ -169,7 +185,7 @@
         });
 
 
-        $("button").on("click", function() {
+        $(".add").on("click", function() {
             var min = Number($('.begin').val());
             var max = Number($('.end').val());
             data.push(new Interval(min,max));
@@ -178,16 +194,32 @@
             $("input").val("");
         });
 
+
+        $(".check").on("click",function(){
+            if (isFull(data,theMaxNumber)) {
+                $("<p>已满</p>").appendTo("body");
+            }else{
+                $("<p>未满</p>").appendTo("body");
+            }
+        });
+
+        $(".clear").on("click",function(){
+            ccc.clearStorage("data");
+            data=[];
+            $("p").remove();
+        });
     });
     </script>
 </head>
 
 <body>
-    假设最大值为9999
+    假设最大值为100
     <br>
     <input type="text" class="begin">--
     <input type="text" class="end">
-    <button class="error">添加</button>
+    <button class="add error">添加</button>
+    <button class="clear">清空数据</button>
+    <button class="check">验证区间是否填满</button>
 </body>
 
 </html>
