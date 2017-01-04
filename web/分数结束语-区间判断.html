@@ -85,7 +85,7 @@
     function isNum(str){
         var rep = /^\d+\.?\d?$/;
         /*
-         *      你需要的正则：    /^\d{1,3}$|^\d{1,3}\.\d?$/
+         *      你需要的正则：    /^\d{1,3}($|\.\d?$)/
          */
         return rep.test(Number(str));
     }
