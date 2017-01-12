@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>主观填空题</title>
+    <link rel="stylesheet" type="text/css" href="css/eaxmCommon.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src='js/examcommon.js'></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 固定头部 -->
+        <div class="header" style="position:fixed;top:0;left:0;width:100%;height: 43px;background: #009bdf"></div>
+
+        <!-- 正文 -->
+        <div class="main">
+            <p class="subject-nav">以下是主观填空题,共10分</p>
+            <h2>【主观填空题】</h2>
+            <p class="title">
+                <span class="left">1、</span>
+                <span class="right">安康收到回复卡还是打开房间哈空间的身份卡，还是大家发挥卡上的，风景库哈斯空间的划分空间啊圣诞节开发就爱看收到回复卡死的很疯狂。</span>
+            </p>
+
+            <!-- 主观填空题 -->
+            <div class="answer subject">
+                <textarea></textarea>
+                <p class="wordLimit">
+                    <span>800</span>
+                </p>
+            </div>
+
+            <!-- 多选上传题 -->
+            <div class="answer multiple">
+                <a href="javascript:void(0)" onclick="maskShow();uploadShow();">
+                    + 选择文件(5M以内)
+                </a>
+                <ul class="filelist">
+                    <li>
+                        文件1<i></i>
+                    </li>
+                    <li>
+                        文件2<i></i>
+                    </li>
+                </ul>
+
+                <!-- 上传时弹出 -->
+                <div class="upload-type">
+                    <a href="javascript:void(0)">拍摄</a>
+                    <a href="javascript:void(0)">从相册中选取</a>
+                    <a href="javascript:void(0)">取消</a>
+                </div>
+            </div>
+
+            <!-- 客观填空题 -->
+            <div class="answer object">
+                <p><i>1</i><input type="text" name="" placeholder="答案1"></p>
+                <p><i>2</i><input type="text" name="" placeholder="答案2"></p>
+                <p><i>3</i><input type="text" name="" placeholder="答案3"></p>
+            </div>
+
+            <div class="btn-group">
+                <a class="white-btn" href="javascript:void(0)">上一题</a>
+                <a class="blue-btn" href="javascript:void(0)">下一题</a>
+            </div>
+
+            <!-- 底部 -->
+            <div class="footer">
+                <p class="exam-title">初级技术水平考试<a onclick='maskShow();selectShow();' href="javascript:void(0)"></a></p>
+                <div class="progress-bar">
+                    <div class="progress-precent">
+                    </div>
+                </div>
+                <div class="info">
+                    <p>已完成<em>3</em>题，共<em>25</em>题</p>
+                    <p>剩余时间：<em>00:40:59</em></p>
+                </div>
+            </div>
+
+            <!-- 题目选择 -->
+            <div class="subject-select">
+                <p>答题情况如下，可点击题目跳转</p>
+                <div class="subject-list">
+                    <a class="active" href="javascript:void(0)">1</a>
+                    <a href="javascript:void(0)">2</a>
+                    <a href="javascript:void(0)">3</a>
+                    <a href="javascript:void(0)">4</a>
+                    <a href="javascript:void(0)">5</a>
+                    <a href="javascript:void(0)">6</a>
+                    <a href="javascript:void(0)">7</a>
+                    <a href="javascript:void(0)">8</a>
+                    <a href="javascript:void(0)">9</a>
+                    <a href="javascript:void(0)">10</a>
+                    <a href="javascript:void(0)">11</a>
+                    <a href="javascript:void(0)">12</a>
+                    <a href="javascript:void(0)">13</a>
+                    <a href="javascript:void(0)">14</a>
+                    <a href="javascript:void(0)">15</a>
+                    <a href="javascript:void(0)">16</a>
+                    <a href="javascript:void(0)">17</a>
+                    <a href="javascript:void(0)">18</a>
+                    <a href="javascript:void(0)">19</a>
+                    <a href="javascript:void(0)">20</a>
+                    <a href="javascript:void(0)">21</a>
+                    <a href="javascript:void(0)">22</a>
+                    <a href="javascript:void(0)">23</a>
+                    <a href="javascript:void(0)">24</a>
+                    <a href="javascript:void(0)">25</a>
+                    <a href="javascript:void(0)">26</a>
+                    <a href="javascript:void(0)">27</a>
+                    <a href="javascript:void(0)">28</a>
+                    <a href="javascript:void(0)">29</a>
+                    <a href="javascript:void(0)">30</a>
+                    <a href="javascript:void(0)">31</a>
+                    <a href="javascript:void(0)">32</a>
+                    <a href="javascript:void(0)">33</a>
+                    <a href="javascript:void(0)">34</a>
+                    <a href="javascript:void(0)">35</a>
+                </div>
+            </div>
+
+            <!-- 蒙层 -->
+            <div class="mask"></div>
+        </div>
+    </div>
+</body>
+</html>
