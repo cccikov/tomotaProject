@@ -77,7 +77,65 @@
 		#demo2 textarea{
 			height:100%;
 		}
+
+
+
+
+		#demo3{
+			display: table;
+			width: 100%;
+		}
+		#demo3 .tr{
+			display: table-row;
+		}
+		#demo3 .td{
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.td.num{
+			width: 50px;
+			text-align: center;
+			background: blue;
+		}
 	</style>
+	<link rel="stylesheet" type="text/css" href="css/test.css">
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+	<script type="text/javascript">
+
+		$(function(){
+			function demo5(height){
+				if(height>=30){
+					var ctx = $("#demo5").find(".ctx");
+					var num = $("#demo5").find(".num");
+					ctx.height(height);
+					num.css({
+						"line-height":height+"px",
+						"width":height<=70?height:70,
+					});
+				}
+			}
+			demo5(50);
+
+
+
+			function demo6(height){
+				if(height>=30){
+					var ctx = $("#demo6").find(".ctx").height(height);
+					var num = $("#demo6").find(".num");
+					if(height<=70){
+						var fs = height/2.5;
+						num.css("font-size",fs);
+					}else{
+						num.css({
+							"line-height":height+"px",
+							"width":"70px"
+						});
+					}
+				}
+			}
+			demo6(50);
+		});
+	</script>
 </head>
 <body>
 	<div id="demo1">
@@ -117,24 +175,7 @@
 	</div>
 
 	<hr>
-	<style type="text/css">
-		#demo3{
-			display: table;
-			width: 100%;
-		}
-		#demo3 .tr{
-			display: table-row;
-		}
-		#demo3 .td{
-			display: table-cell;
-			vertical-align: middle;
-		}
-		.td.num{
-			width: 50px;
-			text-align: center;
-			background: blue;
-		}
-	</style>
+
 	<div id="demo3">
 		<div class="tr">
 			<div class="td num">
@@ -143,6 +184,24 @@
 			<div class="td">
 				<textarea></textarea>
 			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<div id="demo5">
+		<span class="num">2</span>
+		<div class="ctx">
+			<textarea></textarea>
+		</div>
+	</div>
+
+	<hr>
+
+	<div id="demo6">
+		<span class="num">2</span>
+		<div class="ctx">
+			<textarea></textarea>
 		</div>
 	</div>
 
