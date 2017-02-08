@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <style type="text/css">
+    .left {
+        height: 80px;
+        background: #f00;
+    }
+
+    .middle {
+        height: 100px;
+        background: #0f0;
+    }
+
+    .right {
+        height: 80px;
+        background: #00f;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 方法1 -->
+    <style type="text/css">
+        .demo1 {
+            overflow: hidden;
+            /*清浮动*/
+            margin: 15px 0;
+        }
+
+        .demo1 .left {
+            float: left;
+            width: 200px;
+        }
+
+        .demo1 .right {
+            float: right;
+            width: 300px;
+        }
+
+        .demo1 .middle {
+            overflow: hidden;
+        }
+    </style>
+    <div class="demo1">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="middle"></div>
+    </div>
+
+    <!-- 方法2 -->
+    <style type="text/css">
+        .demo2 {
+            overflow: hidden;
+            /*清浮动*/
+            margin: 15px 0;
+        }
+
+        .demo2 .left {
+            float: left;
+            width: 200px;
+        }
+
+        .demo2 .right {
+            float: right;
+            width: 300px;
+        }
+
+        .demo2 .middle {
+            margin: 0 300px 0 200px;
+        }
+    </style>
+    <div class="demo2">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="middle"></div>
+    </div>
+
+    <!-- 方法3 -->
+    <style type="text/css">
+        .demo3 {
+            position: relative;
+            margin: 15px 0;
+        }
+
+        .demo3 .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+        }
+
+        .demo3 .right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+        }
+
+        .demo3 .middle {
+            margin: 0 300px 0 200px;
+        }
+    </style>
+    <div class="demo3">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="middle"></div>
+    </div>
+</body>
+
+</html>
