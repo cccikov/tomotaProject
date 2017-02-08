@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左边根据内容自适应,右边填满</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        .clearfix:after{
+            content: "";
+            display: block;
+            height:0;
+            clear: both;
+        }
+        .item{
+            margin: 0 0 15px;
+        }
+        .left{
+            float: left;
+            line-height: 2em;
+        }
+        .right{
+            overflow: hidden;
+            line-height: 2em;
+        }
+        label{
+            display: block;
+            line-height: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="item clearfix">
+        <span class="left">1、</span>
+        <div class="right">
+            <p>我是题干</p>
+            <label><input type="radio" name="h">选项一</label>
+            <label><input type="radio" name="h">选项二</label>
+            <label><input type="radio" name="h">选项三</label>
+        </div>
+    </div>
+    <div class="item clearfix">
+        <span class="left">11、</span>
+        <div class="right">
+            <p>我是题干</p>
+            <label><input type="radio" name="h">选项一</label>
+            <label><input type="radio" name="h">选项二</label>
+            <label><input type="radio" name="h">选项三</label>
+        </div>
+    </div>
+</body>
+</html>
