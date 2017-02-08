@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进度条</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        .progress-bar{
+            width: 500px;
+            height:30px;
+            margin:20px auto;
+            background: #eaeaea;
+        }
+        .progress-bar div{
+            height:100%;
+            background: #27a4f2;
+        }
+        .progress-bar span{
+            float: left;
+            line-height: 30px;
+            margin:0 0 0 80%;
+            color:#e16f4f;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar">
+        <div style="width: 100%">
+            <span>100%</span>
+        </div>
+    </div>
+    <div class="progress-bar">
+        <div style="width: 60%">
+            <span>60%</span>
+        </div>
+    </div>
+    <div class="progress-bar">
+        <div style="width: 20%">
+            <span>20%</span>
+        </div>
+    </div>
+    <div class="progress-bar">
+        <div style="width: 0%">
+            <span>0%</span>
+        </div>
+    </div>
+</body>
+</html>
