@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多行省略 变点点点</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("textarea").on("input",function(){
+                $("p").html($(this).val());
+                dian($("p"));
+            });
+        });
+
+
+        function dian(obj){
+            var h = obj.height();
+            var sh = obj[0].scrollHeight;
+            if(sh>h){
+                $('<span>...</span>').appendTo("p");
+            }
+        }
+    </script>
+</head>
+<body>
+    <style type="text/css">
+        p{
+            position: relative;
+            width: 100px;
+            line-height: 1.5em;
+            height: 3em;
+            overflow: hidden;
+            word-break: break-all;
+            border:1px solid #eaeaea;
+        }
+        p span{
+            position: absolute;
+            bottom:0;
+            right:0;
+            height:1.5em;
+            background:#fff;
+            width: 1.5em;
+            text-align: center;
+        }
+    </style>
+    <textarea></textarea>
+    <p>
+
+    </p>
+</body>
+</html>
