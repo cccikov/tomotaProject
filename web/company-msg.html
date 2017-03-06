@@ -1,53 +1,73 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>企业信息</title>
-		<link rel="stylesheet" type="text/css" href="css/company-msg.css">
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/company-msg.js"></script>
-	</head>
-	<body>
-		<div class="wrap">
-			<div style="background: #e3e3e3;height:58px;position: absolute;width: 100%;">
-			</div>
-			<div class="company-wrap">
 
-				<!-- 企业信息导航部分 -->
-				<p class="cm-nav">
-					<a href="###">项目管理</a>&gt;<span>企业信息</span>
-				</p>
+<head>
+    <meta charset="UTF-8">
+    <title>企业信息</title>
+    <link rel="stylesheet" type="text/css" href="css/company-msg.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/company-msg.js"></script>
+    <!--[if IE]>
+		<script type="text/javascript">
+			window.onload = function() {
+			    var reg = new RegExp("msie", "gi");
+			    var agent = navigator.userAgent.toLowerCase();
+			    var bodyClass = document.body.className;
+			    if (reg.test(agent)) { //是ie10以下
+			        var index = agent.indexOf("msie");
+			        var num = agent.substr(index + 5, 1);
+			        if(bodyClass==""){
+			        	document.body.className = "ie" + num;
+			        }else{
+			        	document.body.className = bodyClass + " ie" + num;
+			        }
+			    };
+			}
+		</script>
+	<![endif]-->
 
-				<!-- 企业信息主要 -->
-				<div class="cm-main">
-					<div>
-						<p>
-							<span>企业名称：</span>
-							<input type="text" name="">
-						</p>
-					</div>
-					<div>
-						<p>
-							<span>所属行业：</span>
-							<input type="text" name="">
-						</p>
-					</div>
-					<div>
-						<p class="item-upload">
-							<span>企业LOGO：</span>
-							<input class="file-name" type="text" name="" readonly="readonly">
-							<label class="upload">
-								<span>选择文件</span>
-								<input class="file" type="file" name="" accept="image/png,image/x-png,image/jpeg,image/gif,image/bmp">
-							</label>
-						</p>
-					</div>
-					<div class="cm-action">
-						<button class="cm-sure">确定</button>
-						<button class="cm-cancal">取消</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+</head>
+
+<body>
+    <div class="wrap">
+        <div style="background: #e3e3e3;height:58px;position: absolute;width: 100%;">
+        </div>
+        <div class="company-wrap">
+            <!-- 企业信息导航部分 -->
+            <p class="cm-nav">
+                <a href="###">项目管理</a>&gt;<span>企业信息</span>
+            </p>
+            <!-- 企业信息主要 -->
+            <div class="cm-main">
+                <div>
+                    <p>
+                        <span>企业名称：</span>
+                        <input type="text" name="">
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span>所属行业：</span>
+                        <input type="text" name="">
+                    </p>
+                </div>
+                <div>
+                    <p class="item-upload">
+                        <span>企业LOGO：</span>
+                        <input class="file-name" type="text" name="" readonly="readonly">
+                        <label class="upload">
+                            <span>选择文件</span>
+                            <input class="file" type="file" name="" accept="image/png,image/x-png,image/jpeg,image/gif,image/bmp">
+                        </label>
+                    </p>
+                </div>
+                <div class="cm-action">
+                    <button class="cm-sure">确定</button>
+                    <button class="cm-cancal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
