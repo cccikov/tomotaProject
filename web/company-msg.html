@@ -8,24 +8,22 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/company-msg.js"></script>
     <!--[if IE]>
-		<script type="text/javascript">
-			window.onload = function() {
-			    var reg = new RegExp("msie", "gi");
-			    var agent = navigator.userAgent.toLowerCase();
-			    var bodyClass = document.body.className;
-			    if (reg.test(agent)) { //是ie10以下
-			        var index = agent.indexOf("msie");
-			        var num = agent.substr(index + 5, 1);
-			        if(bodyClass==""){
-			        	document.body.className = "ie" + num;
-			        }else{
-			        	document.body.className = bodyClass + " ie" + num;
-			        }
-			    };
-			}
-		</script>
-	<![endif]-->
-
+        <script type="text/javascript">
+        window.onload = function() {
+            var reg = /msie\s(\d+)\.0/i;
+            var agent = navigator.userAgent.toLowerCase();
+            var bodyClass = document.body.className;
+            if (reg.test(agent)) { //是ie10及以下
+                var num = agent.match(reg)[1];
+                if (bodyClass == "") {
+                    document.body.className = "ie" + num;
+                } else {
+                    document.body.className = bodyClass + " ie" + num;
+                }
+            };
+        }
+        </script>
+    <![endif]-->
 </head>
 
 <body>
